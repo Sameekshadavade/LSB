@@ -4,7 +4,7 @@
 //     wp_enqueue_style( 'child-style', get_stylesheet_uri(),array( 'twenty-twenty-three-style' ), wp_get_theme()->get('Version') );
 // }
 // add_action( 'wp_enqueue_scripts', 'twentytwentythree_styles');
-echo get_template_directory_uri();
+echo  get_stylesheet_directory_uri()();
 function add_theme_scripts() {
 
     wp_enqueue_style( 'Bundle_js', get_stylesheet_directory_uri(). '/css/persian-datepicker.css', array(), null, 'all');
