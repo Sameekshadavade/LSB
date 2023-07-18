@@ -8,3 +8,64 @@ function my_theme_enqueue_styles() {
       wp_enqueue_script( 'Bundle-js', get_stylesheet_directory_uri(). '/assets/js/bootstrap.bundle.min.js');	  
       wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri(). '/assets/js/custom.js');
 }
+
+// register menus
+function register_my_menu() {
+      register_nav_menu('lsb-header-menu',__( 'LSB Header Menu' ));
+      register_nav_menu('lsb-footer-menu',__( 'LSB Footer Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+function cc_mime_types( $mimes ){
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+// create the customizer phone nuber option 
+add_action( 'customize_register', 'cd_customizer_settings' );
+function cd_customizer_settings( $wp_customize ) {
+
+    // Create footer section
+    $wp_customize->add_section( 'header_section' , array(
+    'title'      => 'Header Phone Option',
+    'priority'   => 32,
+    ) );
+
+        // Phone Text
+        $wp_customize->add_setting( 'header_phone_option', array(
+        'default'     => '',
+        'transport'   => 'refresh',
+        ) );
+        // Create fbLink field for enter value      
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_phone_option', array(
+        'label'        => 'Header Phone Number',
+        'section'    => 'header_section',
+        'settings'   => 'header_phone_option',
+        'type'   => 'text',
+
+        ) ) );
+
+        }
+
+// html5 support search form 
+add_theme_support('html5', array('search-form'));
+
+// create the acf option fields
+if( function_exists('acf_add_options_page') ) {
+    
+      acf_add_options_page(array(
+          'page_title'    => 'Theme General Settings',
+          'menu_title'    => 'Theme Settings',
+          'menu_slug'     => 'theme-general-settings',
+          'capability'    => 'edit_posts',
+          'redirect'      => false
+      ));
+  
+      acf_add_options_sub_page(array(
+          'page_title'    => 'Footer',
+          'menu_title'    => 'Footer',
+          'parent_slug'   => 'theme-general-settings',
+      ));
+      
+  }

@@ -1,27 +1,29 @@
 
+<?php 
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+?>
 <!-- ======= Start-Header-Area ======= -->
 <header id="header" class="header d-flex align-items-center">
         <div id="site-nav-bar" class="site-nav-bar">
             <div class="upper-bar">
                 <div class="site-brand">
-                    <a href="#">
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/lsb_inline_light-tan.svg" alt="Lock, Stock &amp; Barrel Investments">
+                <?php if ($logo !='' ) { ?>
+                    <a href="#<?php echo home_url(); ?>">
+                        <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>">
                     </a>
+                <?php } else{ echo '<h1>' . get_bloginfo('name') . '</h1>'; } ?>
                 </div>
                 <div>
+                <?php $phone_number = get_theme_mod('header_phone_option'); ?>
                     <ul class="utility-section">
-                        <li>
-                            <h5 class="company-phone-number"><small>Phone:</small>805.285.0715</h5>
-                        </li>
+                    <?php if($phone_number !=''){ ?>    
+                    <li>
+                        <h5 class="company-phone-number"><small>Phone:</small><a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></h5>
+                    </li>
+                    <?php } ?>
                         <li class="search-bar">
-                            <form role="search" method="get" class="searchform"
-                                action="#">
-                                <fieldset>
-                                    <legend class="visibility-hidden">Search</legend>
-                                    <input type="text" class="s form-control search-label" name="s"
-                                        placeholder="Search…" value="" aria-label="Search">
-                                </fieldset>
-                            </form>
+                            <?php get_search_form(); ?>
                         </li>
                     </ul>
                 </div>
@@ -29,34 +31,7 @@
             <div class="lower-bar">
                 <div class="container-fluid">
                     <nav id="navbar" class="navbar w-100">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li class="dropdown"><a href="#"><span>Company</span> <i
-                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Staff</a></li>
-                                    <li><a href="#">Spencer Hoglund</a></li>
-                                    <li><a href="#">Our Collection</a></li>
-                                    <li><a href="#">Articles</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="#"><span>Buy & Sell</span> <i
-                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                <ul>
-                                    <li><a href="#">Our Process</a></li>
-                                    <li><a href="#">Acquisition</a></li>
-                                    <li><a href="#">Auctions</a></li>
-                                    <li><a href="#">Sell</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Sold Items</a></li>
-                            <li><a href="#">Get Started</a></li>
-                            <li><a href="#">Make Payment</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
+                    <?php wp_nav_menu(array('theme_location' => 'lsb-header-menu') ); ?>
                     </nav><!-- .navbar -->
                     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
                     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
