@@ -1,13 +1,10 @@
 <?php
 /* enqueue scripts and style from parent theme */
-
-	 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles' );
-	 function child_enqueue_styles() {
- 		  wp_enqueue_style( 'parent-style_theme',  get_stylesheet_directory_uri() . '/style.css' ); 
-           wp_enqueue_style( 'Bundle_js', get_stylesheet_directory_uri(). '/Javascript/bootstrap.bundle.min.js', array(), null, 'all');
- 		  
-           wp_enqueue_style( 'Custom_js', get_stylesheet_directory_uri(). '/Javascript/custom.js', array(), null, 'all');
-        } 
- 
-
-?>
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles', 99 );
+function my_theme_enqueue_styles() {
+      wp_enqueue_style( 'bootstrap-min',  get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css','', time() );
+      wp_enqueue_style( 'bootstrap-icons',  get_stylesheet_directory_uri() . '/assets/css/bootstrap-icons/bootstrap-icons.css','', time() );                 
+      wp_enqueue_style( 'parent-style_theme',  get_stylesheet_directory_uri() . '/assets/css/styles.css','', time() );         
+      wp_enqueue_script( 'Bundle-js', get_stylesheet_directory_uri(). '/assets/js/bootstrap.bundle.min.js');	  
+      wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri(). '/assets/js/custom.js');
+}
