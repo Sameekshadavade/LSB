@@ -2112,38 +2112,38 @@ header.page-header h1.page-title::after {
   max-width: 100%;
 }
 
-.why-lsb ul {
+.why-lsb-block ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 768px) {
-  .why-lsb ul {
+  .why-lsb-block ul {
     display: flex;
     flex-flow: row wrap;
   }
 }
 
-.why-lsb ul li {
+.why-lsb-block ul li {
   margin-top: 2rem;
 }
-.why-lsb ul li h3 {
+.why-lsb-block ul li h3 {
   font-size: 1rem;
 }
 
 @media (min-width: 768px) {
-  .why-lsb ul li {
+  .why-lsb-block ul li {
     width: 50%;
   }
 }
 
-.why-lsb ul li p {
+.why-lsb-block ul li p {
   margin: 0;
 }
 
 @media (min-width: 576px) {
-  .why-lsb ul li p {
+  .why-lsb-block ul li p {
     max-width: 90%;
   }
 }
