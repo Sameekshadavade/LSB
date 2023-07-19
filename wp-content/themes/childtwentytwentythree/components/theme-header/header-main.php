@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="lower-bar">
-                <div class="container-fluid">
+                <div class="container-fluid p-0">
                     <nav id="navbar" class="navbar w-100">
                     <?php wp_nav_menu(array('theme_location' => 'lsb-header-menu') ); ?>
                     </nav><!-- .navbar -->
