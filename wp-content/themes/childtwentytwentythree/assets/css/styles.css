@@ -2541,6 +2541,9 @@ h2.section-heading span {
     max-width: 900px;
   }
 }
+.banner-section.about .lsb-brand {
+  max-width: 200px;
+}
 .banner-section .banner-content h1,
 .banner-section .banner-content h2 {
   position: relative;
