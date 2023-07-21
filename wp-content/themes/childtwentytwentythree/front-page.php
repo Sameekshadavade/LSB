@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <!-- ======= Start-Main-Area ======= -->
+<?php $home_banner_slider_shortcode = get_field('_home_banner_slider_shortcode'); ?>
 <div class="main-wrapper-area">
     <!-- ======= Start-Banner-Area ======= -->
+    <?php echo do_shortcode($home_banner_slider_shortcode); ?>
     <section class="showcase">
         <div class="hero-cover"></div>
         <div class="showcase-wrap">
@@ -282,132 +284,100 @@
         </div>
     </section>
     <!-- ======= End-Banner-Area ======= -->
+<?php  
+
+$current_auctions_head_title = get_field('_current_auctions_head_title');
+$current_auctions_repeater = get_field('_current_auctions_repeater');
+
+if($current_auctions_repeater !=''){
+?>
     <!-- ======= Start-auctions-partner-Area ======= -->
     <div class="container-fluid no-padding">
         <section class="row auctions-partner-section">
-            <h4>Current Auctions</h4>
+            <h4><?php echo $current_auctions_head_title; ?></h4>
+  <?php foreach($current_auctions_repeater as $current_auctions_val){ ?>
             <div class="col-md-6 col-lg">
-                <a href="#" rel="noopener noreferrer" target="_blank">
+        <?php if($current_auctions_val['_auctions_link'] !=''){ ?>
+            <a href="<?php echo $current_auctions_val['_auctions_link']; ?>" rel="noopener noreferrer" target="_blank">
                     <span>
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/gun-broker_brand.svg" alt="">
+                        <img src="<?php echo $current_auctions_val['_auctions_image']['url']; ?>" alt="<?php echo $current_auctions_val['_auctions_title']; ?>">
                     </span>
-                    <h5>Premium Gun Auctions</h5>
+                    <h5><?php echo $current_auctions_val['_auctions_title']; ?></h5>
                     <span class="new-tab-warning">
                         Opens a new window
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/icon-external-link.svg" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_external_link.svg" alt="link_icon">
                     </span>
                 </a>
+     <?php } ?>
             </div>
-            <div class="col-md-6 col-lg">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                    <span>
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/wyoa_gun-broker_brand.svg" alt="">
-                    </span>
-                    <h5>Wyoming Outpost Auctions</h5>
-                    <span class="new-tab-warning">
-                        Opens a new window
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/icon-external-link.svg" alt="">
-                    </span>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                    <span>
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/ebay_brand.svg" alt="">
-                    </span>
-                    <h5>Shooting, Gun Parts, Collectibles,<br> &amp; Reloading Accessories Auctions</h5>
-                    <span class="new-tab-warning">
-                        Opens a new window
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/icon-external-link.svg" alt="">
-                    </span>
-                </a>
-            </div>
-            <div class="col-md-6 col-lg">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                    <span>
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/gun-broker_brand.svg" alt="">
-                    </span>
-                    <h5>Ammo &amp; Reloading Components Auctions</h5>
-                    <span class="new-tab-warning">
-                        Opens a new window
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/icon-external-link.svg" alt="">
-                    </span>
-                </a>
-            </div>
+  <?php } ?>
         </section>
     </div>
-    <!-- ======= End-auctions-partner-Area ======= -->
-    <!-- ======= Start-inner-content-section-Area ======= -->
-    <section class="inner-content-section">
-        <div class="container page-content">
-            <header class="page-header">
-                <h1 class="page-title">Welcome To LSB</h1>
-            </header>
-            <!-- ======= Start-about-buy-sell-section ======= -->
-            <section class="about-buy-sell row">
-                <div class="col-sm-6 col-lg-3 offset-lg-6">
-                    <h2 class="large">Buy</h2>
-                    <p>
-                        Whether you are looking for your first gun or to add to your collection, see how we are the best option for
-                        completing your purchase – Without a Buyers Premium!
-                    </p>
-                    <a href="#" class="cta">Our Auctions</a>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <h2 class="large">Sell</h2>
-                    <p>
-                        If you are looking to sell a single item or an entire collection, learn how we are the premier choice for
-                        getting the best value for your items.
-                    </p>
-                    <a href="#" class="cta">Our Process</a>
-                </div>
-                <img class="d-sm-none" src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/buy-sell_background.png" alt="">
-            </section>
-            <!-- ======= End-about-buy-sell-section ======= -->
+<!-- ======= End-auctions-partner-Area ======= -->
+<?php
+} 
 
+$welcome_title = get_field('_welcome_title');
+$welcome_left_image = get_field('_welcome_left_image');
+$welcome_left_desktop_image = get_field('_welcome_left_desktop_image');
+$welcome_repeater = get_field('_welcome_repeater');
+$counter = 1;
+if($welcome_repeater !='' || $welcome_left_image !=''){
+?>
+        <!-- ======= Start-inner-content-section-Area ======= -->
+        <section class="inner-content-section">
+            <div class="container page-content">
+      <?php if($welcome_title !=''){ ?>
+                <header class="page-header">
+                    <h1 class="page-title" ><?php echo $welcome_title; ?></h1>
+                </header>
+       <?php } ?>
+                <!-- ======= Start-about-buy-sell-section ======= -->
+                <section class="about-buy-sell row" style="background-image: url(<?php echo $welcome_left_desktop_image['url']; ?>);">
+      <?php foreach($welcome_repeater as $welcome_repeater_val){ ?>
+                <div class="col-sm-6 col-lg-3 <?php if($counter == 1){ echo "offset-lg-6"; } ?> ">
+             <?php if($welcome_repeater_val['_right_side_buy_title'] !=''){ ?>
+                        <h2 class="large"><?php echo $welcome_repeater_val['_right_side_buy_title']; ?></h2>
+             <?php } if($welcome_repeater_val['_right_side_block_content'] !=''){ ?>
+                        <?php echo $welcome_repeater_val['_right_side_block_content']; ?>
+              <?php } if($welcome_repeater_val['_our_auctions_button'] !=''){ ?>
+                        <a href="<?php echo $welcome_repeater_val['_our_auctions_button']['url']; ?>" class="cta"><?php echo $welcome_repeater_val['_our_auctions_button']['title']; ?></a>
+              <?php } ?>
+                    </div>
+      <?php $counter++; }  //if($welcome_left_image[''] !=''){ ?>
+                    <img class="d-sm-none" src="<?php echo $welcome_left_image['url']; ?>" alt="<?php echo $welcome_left_image['alt']; ?>">
+         <?php //} ?>
+                </section>
+            <!-- ======= End-about-buy-sell-section ======= -->
+<?php } 
+      
+$why_lock_title = get_field('_why_lock_title');
+$why_lock_repeater = get_field('_why_lock_repeater');
+$recently_sold_title = get_field('_recently_sold_title');
+
+if($why_lock_repeater !=''){
+ ?>
             <!-- ======= Start-why-lsb-section ======= -->
             <section class="why-lsb-block">
                 <div class="col-lg-12">
-                    <h2 class="section-heading"><span>Why Lock, Stock &amp; Barrel</span></h2>
+            <?php if($why_lock_title !=''){ ?>
+                    <h2 class="section-heading"><span><?php echo $why_lock_title; ?></span></h2>
+            <?php } ?>
                     <ul>
+                    <?php foreach($why_lock_repeater as $why_lock_repeater_val){ ?>
                         <li>
-                            <h3>Experience</h3>
-                            <p>Lock Stock &amp; Barrel is the premier West Coast auction house for firearms, militaria, and
-                                shooting/reloading accessories.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Volume</h3>
-                            <p>We currently auction over 15,000 firearms and 30,000 associated items every year, making us the
-                                largest seller of used firearms and related merchandise on the West Coast.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Availability</h3>
-                            <p>We obtain single items and entire collections for auction from all 50 U.S. states. We sell to all 50 U.S.
-                                states, as well as several countries.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Transparency</h3>
-                            <p>We auction your items with unmatched detailed descriptions, and superior high resolution photography.
-                                Buyers will be able to see and read exactly what they are bidding on. Every aspect, good or bad, is shown
-                                and explained.
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Satisfaction</h3>
-                            <p>Our ethical and honest business practices and keen focus on customer service, have led to nearly 100%
-                                positive and A+ feedback after tens of thousands of transactions. No matter what the issue, we always
-                                ensure
-                                our customers are satisfied.
-                            </p>
-                        </li>
+                 <?php if($why_lock_repeater_val['_why_inner_title'] !=''){ ?>
+                            <h3><?php echo $why_lock_repeater_val['_why_inner_title']; ?></h3>
+                 <?php } if($why_lock_repeater_val['_why_inner_content'] !=''){ ?>
+                          <?php echo $why_lock_repeater_val['_why_inner_content']; ?>
+                <?php } ?>
+                    </li>
+                    <?php } ?>
                     </ul>
                 </div>
             </section>
             <!-- ======= End-why-lsb-section ======= -->
-
+<?php } ?>
             <!-- ======= Start-client-review-slider-section ======= -->
             <section class="banner bg-banner-block mt-5 mb-5">
                 <div class="banner-wrapper">
