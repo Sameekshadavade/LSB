@@ -2116,7 +2116,6 @@ header.page-header h1.page-title::after {
 @media (min-width: 992px) {
   .about-buy-sell {
     padding-bottom: 0;
-    background-image: url(../images/buy-sell_background-lg.png);
     background-position: left bottom;
   }
 }
