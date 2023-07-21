@@ -188,7 +188,6 @@ h2 {
   font-size: 1.75rem;
   margin: 0 0 1rem 0;
   line-height: 1;
-  text-align: center;
 }
 h2.large {
   font-size: 2.5rem;
@@ -2295,7 +2294,6 @@ header.page-header h1.page-title::after {
 
 .feedback-link a span {
   display: block;
-  width: 100%;
   color: var(--color-white);
   text-align: center;
   padding: 0.25rem 0;
@@ -2478,7 +2476,6 @@ h2.section-heading span {
   font-weight: 400;
   color: var(--color-default);
 }
-
 .cta-section-footer {
   display: flex;
   width: 100%;
@@ -2496,4 +2493,225 @@ h2.section-heading span {
 }
 .cta-section-footer::after {
   margin-left: 1rem;
+}
+
+/*--------------------------------------------------------------
+# About Page Css
+--------------------------------------------------------------*/
+
+/* ---------common-banner-section-css------------- */
+.hero-cover {
+  position: absolute;
+  z-index: 777;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #130b00;
+}
+.banner-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 340px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #130b00;
+}
+@media (min-width: 576px) {
+  .banner-section {
+    height: 35vh;
+    max-height: 400px;
+    min-height: 375px;
+  }
+}
+.banner-section .banner-content {
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .banner-section .banner-content {
+    max-width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .banner-section .banner-content {
+    max-width: 900px;
+  }
+}
+.banner-section .banner-content h1,
+.banner-section .banner-content h2 {
+  position: relative;
+  display: block;
+  letter-spacing: 0.05rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 20px #000;
+  padding: 0 2rem;
+  margin-bottom: 0;
+  font-size: clamp(1.75rem, 1.4076rem + 1.5217vw, 3.5rem);
+}
+.banner-section .banner-content h1 em,
+.banner-section .banner-content h2 em {
+  font-style: initial;
+  text-decoration: underline;
+}
+.banner-section .common-banner-image {
+  height: 100%;
+}
+.banner-section .common-banner-image picture {
+  display: block;
+  height: 100%;
+}
+.banner-section .common-banner-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.banner-section.consignment {
+  background-image: url(../images/hero-consignment-sm.jpg);
+}
+@media (min-width: 768px) {
+  .banner-section.consignment {
+    background-image: url(../images/hero-consignment-lg.jpg);
+  }
+}
+.banner-section.about {
+  background-image: url(../images/hero-about-sm.jpg);
+}
+.banner-section.about .lsb-brand {
+  max-width: 200px;
+}
+@media (min-width: 768px) {
+  .banner-section.about {
+    background-image: url(../images/hero-about-lg.jpg);
+  }
+}
+.banner-section.process {
+  background-image: url(../images/hero-process-sm.jpg);
+}
+@media (min-width: 768px) {
+  .banner-section.process {
+    background-image: url(../images/hero-process-lg.jpg);
+  }
+}
+.banner-section.auctions {
+  background-image: url(../images/hero-auctions-sm.jpg);
+}
+@media (min-width: 768px) {
+  .banner-section.auctions {
+    background-image: url(../images/hero-auctions-lg.jpg);
+  }
+}
+.banner-section.get-started {
+  background-image: url(../images/hero-start-sm.jpg);
+}
+@media (min-width: 576px) {
+  .banner-section.get-started {
+    height: 50vh;
+    max-height: 700px;
+    min-height: 375px;
+    border-bottom: 5px solid #7d0000;
+  }
+}
+@media (min-width: 768px) {
+  .banner-section.get-started {
+    background-image: url(../images/hero-start-lg.jpg);
+  }
+}
+.banner-section.contact {
+  background-image: url(../images/hero-contact-sm.jpg);
+}
+@media (min-width: 768px) {
+  .banner-section.contact {
+    background-image: url(../images/hero-contact-lg.jpg);
+  }
+}
+.banner-section.sell {
+  background-image: url(../images/hero-sell-sm.jpg);
+}
+@media (min-width: 768px) {
+  .banner-section.sell {
+    background-image: url(../images/hero-sell-lg.jpg);
+  }
+}
+.banner-section.spencer {
+  background-image: url(../images/hero-spencer-sm.jpg);
+}
+.banner img {
+  width: 100%;
+}
+.banner-section.spencer a.play-btn {
+  display: block;
+  margin: 0 auto;
+}
+.banner-section.spencer a.play-btn img {
+  max-width: 100px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.banner-section.spencer a.play-btn:hover img {
+  opacity: 1;
+}
+.banner-section.spencer p {
+  color: #fff;
+  text-shadow: 0 0 4px #2c1a00;
+}
+@media (min-width: 768px) {
+  .banner-section.spencer {
+    background-image: url(../images/hero-spencer-lg.jpg);
+  }
+}
+.note-block {
+  font-style: oblique;
+  font-weight: 700;
+  font-size: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+ol.circle-checkmark,
+ul.circle-checkmark {
+  list-style: none;
+}
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  ol.two-col,
+  ul.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 5rem;
+  }
+}
+.lsb-difference ul li {
+  margin-bottom: 1rem;
+}
+ol.circle-checkmark li, ul.circle-checkmark li {
+  position: relative;
+}
+ol.circle-checkmark li::before, ul.circle-checkmark li::before {
+  display: block;
+  position: absolute;
+  display: block;
+  left: -30px;
+  top: 4px;
+  content: url(../images/circle-checkmark.svg);
+}
+.lsb-difference ul h3 {
+  position: relative;
+  width: 100%;
+  color: #2c1a00;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 1rem;
 }
