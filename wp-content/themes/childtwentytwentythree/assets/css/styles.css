@@ -767,7 +767,7 @@ ul.utility-section i.material-icons {
     color: var(--color-white);
   }
   .mobile-nav-show {
-    color: var(--color-secondary);
+    color: var(--color-black);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
