@@ -2150,7 +2150,7 @@ header.page-header h1.page-title::after {
 }
 header.page-header h1.page-title::after {
   display: block;
-  content: url(../images/heading-flourish.svg);
+  content: url(../images/heading_flourish.svg);
   max-width: 80px;
   margin: 0 auto;
   margin-bottom: 0;
@@ -2316,7 +2316,7 @@ h2.section-heading {
 }
 @media (min-width: 768px) {
   h2.section-heading {
-    background: url(../images/1x1-dark-brown.gif) repeat-x center center;
+    background: url(../images/dark_brown.gif) repeat-x center center;
     padding: 0 5rem;
   }
 }

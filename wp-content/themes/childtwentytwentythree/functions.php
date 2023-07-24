@@ -77,3 +77,30 @@ if( function_exists('acf_add_options_page') ) {
       ));
       
   }
+
+//   Testimonial custom post type
+function create_posttype_testimonial() {
+    register_post_type( 'testimonial',
+      array(
+        'labels' => array(
+          'name' => __( 'Testimonial' ),
+          'singular_name' => __( 'Testimonial' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'testimonial'),
+        'supports' => array('title','editor','thumbnail', 'comments')
+      )
+    );
+    register_taxonomy(
+          'testimonial-category',
+          'testimonial',
+          array(
+              'label' => __( 'Category' ),
+              'rewrite' => array( 'slug' => 'testimonial-category' ),
+              'hierarchical' => true,
+          )
+      );
+  }
+  add_theme_support( 'post-thumbnail' );
+  add_action( 'init', 'create_posttype_testimonial' );
