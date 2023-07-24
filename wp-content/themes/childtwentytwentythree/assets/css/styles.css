@@ -725,7 +725,7 @@ ul.utility-section i.material-icons {
     justify-content: space-between;
     padding: 16px 20px;
     font-family: var(--font-secondary);
-    border-bottom: 1px solid #640000;
+    border-bottom: 1px solid #973b3b;
     font-size: 16px;
     font-weight: 600;
     color: var(--color-secondary);
@@ -740,11 +740,11 @@ ul.utility-section i.material-icons {
   }
   .navbar a:hover,
   .navbar li:hover > a {
-    color: var(--color-black);
+    color: var(--color-white);
   }
   .navbar .active,
   .navbar .active:focus {
-    color: var(--color-black);
+    color: var(--color-white);
     border-color: var(--color-primary);
   }
   .navbar .dropdown ul,
@@ -752,9 +752,10 @@ ul.utility-section i.material-icons {
     position: static;
     display: none;
     padding: 10px 0;
-    margin: 10px 20px;
+    margin: 0px;
     transition: all 0.5s ease-in-out;
-    border: 1px solid #eee;
+    border: none;
+    background: #640000;
   }
   .navbar .dropdown > .dropdown-active,
   .navbar .dropdown .dropdown > .dropdown-active {
@@ -782,7 +783,7 @@ ul.utility-section i.material-icons {
     line-height: 0;
     transition: 0.5s;
     position: fixed;
-    right: 14px;
+    right: 4px;
     top: 8px;
     z-index: 9999;
   }
@@ -2178,6 +2179,12 @@ header.page-header h1.page-title::after {
   }
 }
 
+@media (max-width: 991px) {
+  .about-buy-sell {
+    background-image: none !important;
+  }
+}
+
 .about-buy-sell h2 {
   text-align: center;
 }
@@ -2185,6 +2192,7 @@ header.page-header h1.page-title::after {
 .about-buy-sell img {
   width: 100%;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 .about-buy-sell > div {
@@ -2683,7 +2691,9 @@ ol.circle-checkmark,
 ul.circle-checkmark {
   list-style: none;
 }
-dl, ol, ul {
+dl,
+ol,
+ul {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -2698,10 +2708,12 @@ dl, ol, ul {
 .lsb-difference ul li {
   margin-bottom: 1rem;
 }
-ol.circle-checkmark li, ul.circle-checkmark li {
+ol.circle-checkmark li,
+ul.circle-checkmark li {
   position: relative;
 }
-ol.circle-checkmark li::before, ul.circle-checkmark li::before {
+ol.circle-checkmark li::before,
+ul.circle-checkmark li::before {
   display: block;
   position: absolute;
   display: block;

@@ -12,6 +12,14 @@
     </section>
     <!-- ======= End-Banner-Area ======= -->
 
+    <div class="container page-content">
+        <section class="common-header mb-5">
+            <header class="page-header">
+                <h1 class="page-title">Our Staff</h1>
+            </header>
+        </section>
+    </div>
+
 </div>
 <!-- ======= End-Main-Area ======= -->
 <?php get_footer(); ?>
