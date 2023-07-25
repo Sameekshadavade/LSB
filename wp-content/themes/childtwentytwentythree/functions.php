@@ -105,3 +105,28 @@ function create_posttype_testimonial() {
   add_theme_support( 'post-thumbnail' );
   add_action( 'init', 'create_posttype_testimonial' );
   add_filter( 'big_image_size_threshold', '__return_false' );
+
+//register widget footer option
+$AuctionsMenu = array(
+  'name' => 'Auction Footer Widget',
+  'id' => 'auction-footer-widget',
+  'description' => 'Auction Footer Widget',
+  'class' => 'auction-widgt-class'
+);
+register_sidebar($AuctionsMenu);
+
+$CompanyMenu = array(
+  'name' => 'Company Footer Widget',
+  'id' => 'company-footer-widget',
+  'description' => 'Company Footer Widget',
+  'class' => 'company-widgt-class'
+);
+register_sidebar($CompanyMenu);
+
+$LegalMenu = array(
+  'name' => 'Legal Footer Widget',
+  'id' => 'legal-footer-widget',
+  'description' => 'Legal Footer Widget',
+  'class' => 'legal-widgt-class'
+);
+register_sidebar($LegalMenu);

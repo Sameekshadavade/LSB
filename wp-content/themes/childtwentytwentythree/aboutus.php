@@ -5,7 +5,6 @@
 <?php  
 
 $about_banner_desktop_image = get_field('_about_banner_desktop_image_');
-$about_banner_mobile_image = get_field('_about_banner_mobile_image_');
 $banner_site_logo = get_field('_banner_site_logo');
 $banner_heading_text = get_field('_banner_heading_text');
 
@@ -13,7 +12,7 @@ $banner_heading_text = get_field('_banner_heading_text');
 <div class="main-wrapper-area">
 
     <!-- ======= Start-Banner-Area ======= -->
-<?php if($about_banner_desktop_image !='' || $banner_site_logo !='' || $banner_heading_text !='' || $about_banner_mobile_image !=''){ ?>
+<?php if($about_banner_desktop_image !='' || $banner_site_logo !='' || $banner_heading_text !=''){ ?>
     <section class="banner-section about" style="background-image:url(<?php echo $about_banner_desktop_image['url']; ?>);">
         <div class="banner-content">
     <?php if($banner_site_logo !=''){ ?>    
