@@ -2777,3 +2777,22 @@ background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/asse
     font-size: 2.5rem!important;
   }
 }
+
+
+.home-banner-newsletter input[type=email] {
+  height: 35px;
+  background: #fff;
+  padding: 0.5rem 1rem!important;
+  border: 1px solid #7d0000;
+  
+}
+
+.home-banner-newsletter input[type=submit]{background: #7d0000;
+  opacity: 1;
+  padding: 10px 30px 10px 30px;
+  box-shadow: none;
+  border: 0px solid RGBA(0,0,0,1);
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px}
