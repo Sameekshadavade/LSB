@@ -8,7 +8,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
         <div class="upper-bar">
             <div class="site-brand">
                 <?php if ($logo != '') { ?>
-                    <a href="#<?php echo home_url(); ?>">
+                    <a href="<?php home_url(); ?>">
                         <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>">
                     </a>
                 <?php } else {

@@ -104,7 +104,6 @@ if($why_lock_repeater !=''){
         'post_type' => 'testimonial',
         'order' => 'DESC',
         'post_status' => 'publish',
-        'posts_per_page' => 1,
     );
     $Query = new WP_Query($args);
 
@@ -119,9 +118,13 @@ if($why_lock_repeater !=''){
                                             while ($Query->have_posts()) : $Query->the_post(); 
                                             $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                                                 <div class="testimonial">
-                                                        <img class="five-stars-icon" src="<?php echo $feat_image; ?>" alt="Testimonial Stars" />
+                                                <?php if($feat_image !=''){ ?>
+                                                    <img class="five-stars-icon" src="<?php echo $feat_image; ?>" alt="Testimonial Stars" />
+                                                <?php } if(get_the_content() !=''){ ?>
                                                         <?php the_content(); ?>
+                                                <?php } if(get_the_title() !=''){ ?>
                                                         <cite><?php the_title(); ?></cite>
+                                                <?php } ?>
                                                     </div>
                                 <?php     endwhile; 
                                 endif;
@@ -184,7 +187,7 @@ $Post_Query = new WP_Query($args);
                  ?>
                 </div>
                 <span class="cta-section-footer">
-                    <a class="cta" href="/category/all-sold-items">
+                    <a class="cta" href="<?php echo home_url(); ?>">
                         <span>View All Sold Items</span>
                     </a>
                 </span>

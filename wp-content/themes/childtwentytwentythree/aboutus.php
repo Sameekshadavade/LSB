@@ -1,132 +1,118 @@
-<?php /* Template Name: about us Template */ ?>
+<?php /* Template Name: About us */ ?>
 
 <?php get_header(); ?>
 <!-- ======= Start-Main-Area ======= -->
+<?php  
+
+$about_banner_desktop_image = get_field('_about_banner_desktop_image_');
+$about_banner_mobile_image = get_field('_about_banner_mobile_image_');
+$banner_site_logo = get_field('_banner_site_logo');
+$banner_heading_text = get_field('_banner_heading_text');
+
+?>
 <div class="main-wrapper-area">
 
     <!-- ======= Start-Banner-Area ======= -->
-    <section class="banner-section about">
+<?php if($about_banner_desktop_image !='' || $banner_site_logo !='' || $banner_heading_text !='' || $about_banner_mobile_image !=''){ ?>
+    <section class="banner-section about" style="background-image:url(<?php echo $about_banner_desktop_image['url']; ?>);">
         <div class="banner-content">
-            <img class="lsb-brand" src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/lsb_letters-white.svg" alt="LSB">
-            <h2>We take your satisfaction <em>very</em> seriously</h2>
+    <?php if($banner_site_logo !=''){ ?>    
+            <img class="lsb-brand" src="<?php echo $banner_site_logo['url']; ?>" alt="<?php echo $banner_site_logo['alt']; ?>">
+    <?php } if($banner_heading_text !=''){ ?>
+            <h2><?php echo $banner_heading_text; ?></h2>
+    <?php } ?>
         </div>
     </section>
+<?php } 
+
+
+$about_us_title = get_field('_about_us_title');
+$left_side_title = get_field('_left_side_title');
+$left_side_content = get_field('_left_side_content');
+$right_side_history_image = get_field('_right_side_history_image');
+
+$lock_stock_head_title = get_field('_lock_stock_head_title');
+$difference_repeater = get_field('_difference_repeater');
+
+?>
     <!-- ======= End-Banner-Area ======= -->
 
     <div class="container page-content">
-        <section class="common-header mb-5">
-            <header class="page-header">
-                <h1 class="page-title">About Us</h1>
-            </header>
-        </section>
+        <?php if($about_us_title !=''){ ?>
+            <section class="common-header mb-5">
+                <header class="page-header">
+                    <h1 class="page-title"><?php echo $about_us_title; ?></h1>
+                </header>
+            </section>
+  <?php } if($left_side_title !='' || $left_side_content !='' || $right_side_history_image !=''){ ?>
         <section class="history-section pt-md-5">
             <div class="row">
                 <div class="col-md-8">
-                    <h2>Our History</h2>
-                    <p>
-                        Lock, Stock and Barrel specializes in the acquisition and disposition of firearms, firearm paraphernalia,
-                        reloading equipment and military/war memorabilia. We acquire items of any vintage, and any condition, from
-                        individuals and estates nationwide for any liquidation purpose. We will purchase or consign single items or
-                        entire collections – with a proven track record of achieving better than market prices for our sellers.
-                    </p>
-                    <p>
-                        Lock, Stock &amp; Barrel was started by Spencer Hoglund, a noted firearms collector, researcher and a World
-                        Champion
-                        Cowboy Shooter. Spencer realized gun owners were in need of an honest and reliable destination for selling
-                        their
-                        guns and related items. Lock, Stock &amp; Barrel has grown to be the largest auction house of its kind on the West
-                        Coast.
-                    </p>
+                <?php if($left_side_title !=''){ ?>
+                        <h2><?php echo $left_side_title; ?></h2>
+                <?php } if($left_side_content !=''){ ?>
+                        <?php echo $left_side_content; ?>
+                <?php }  ?>
                 </div>
+      <?php if($right_side_history_image !=''){ ?>
                 <div class="col-md-4">
                     <div class="banner">
-                        <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/100-percent-feedback_square.png" alt="">
+                        <img src="<?php echo $right_side_history_image['url']; ?>" alt="<?php echo $right_side_history_image['alt']; ?>">
                     </div>
                 </div>
+      <?php } ?>
             </div>
         </section>
+    <?php } if($lock_stock_head_title !='' || $difference_repeater !=''){ ?>
         <section class="row lsb-difference mt-5 mb-5">
             <div class="col">
                 <h2 class="section-heading"><span>The Lock, Stock &amp; Barrel Difference</span></h2>
                 <ul class="two-col circle-checkmark">
-                    <li>
-                        <h3>Flat Commission</h3>
-                        <p>There are no hidden fees, ever. You will see every detail of the transaction from beginning to end. With
-                            <em>No Buyer’s Premium</em>.
-                        </p>
+            <?php foreach($difference_repeater as $difference_repeater_val){ ?>
+                <li>
+              <?php if($difference_repeater_val['_difference_title'] !=''){ ?>
+                        <h3><?php echo $difference_repeater_val['_difference_title']; ?></h3>
+              <?php } if($difference_repeater_val['_difference_content'] !=''){ ?>    
+                        <?php echo $difference_repeater_val['_difference_content']; ?>
+                <?php } ?>
                     </li>
-                    <li>
-                        <h3>We Sell Without A Buyer’s Premium</h3>
-                        <p>We strive to deliver the most money possible to our sellers and deliver quality merchandise without added
-                            fees to our buyers.</p>
-                    </li>
-                    <li>
-                        <h3>Guaranteed Sales Dates &amp; Payment Dates</h3>
-                        <p>You will know when your items are going to auction, and when you can expect your proceeds.</p>
-                    </li>
-                    <li>
-                        <h3>Timely Auctions</h3>
-                        <p>&ZeroWidthSpace;Over 3 million page visitors will have the opportunity to see your merchandise. We ensure that we
-                            maximize this exposure with 14-day auctions.</p>
-                    </li>
-                    <li>
-                        <h3>Photography &amp; Descriptions</h3>
-                        <p>Your items will be marketed with world class image quality, quantity, and highly detailed descriptions of
-                            each aspect of your items.</p>
-                    </li>
-                    <li>
-                        <h3>Online Auction Presence</h3>
-                        <p>Buyers can bid anytime/anywhere, and sellers can monitor their items in real time.</p>
-                    </li>
-                    <li>
-                        <h3>Our Descriptions Are Very Detailed</h3>
-                        <p>We highlight every aspect of our items – good or bad, we encourage you to compare our descriptions with
-                            any
-                            of our competitors to see the Lock Stock &amp; Barrel difference.</p>
-                    </li>
+                <?php } ?>
                 </ul>
             </div>
         </section>
+<?php 
+}
+$buyer_feedback_head_title = get_field('_buyer_feedback_head_title');
+$buyer_feedback_content = get_field('_buyer_feedback_content');
+$buyer_feedback_notice = get_field('_buyer_feedback_notice');
+$feedback_repeater = get_field('_feedback_repeater');
+
+?>
         <section class="row user-feedback">
             <div class="col">
-                <h2 class="section-heading"><span>Buyer Feedback</span></h2>
-                <p>Over the years, we’ve listed and sold tens of thousands of guns and related merchandise through online
-                    auction.
-                    We take your satisfaction <em>VERY SERIOUSLY</em> at Lock Stock &amp; Barrel, and you can see this in our
-                    unmatched
-                    feedback on all sites.</p>
-                <p class="note-block">
-                    &ZeroWidthSpace;Please note: The links below will open a new window to the reviews section on each respective site.
-                </p>
+            <?php if($buyer_feedback_head_title !=''){ ?>
+                    <h2 class="section-heading"><span><?php echo $buyer_feedback_head_title; ?></span></h2>
+            <?php } if($buyer_feedback_content !=''){ ?>
+                <?php echo $buyer_feedback_content; ?>
+            <?php } if($buyer_feedback_notice !=''){ ?>
+                    <p class="note-block">
+                        <?php echo $buyer_feedback_notice; ?>
+                    </p>
+        <?php } ?>
                 <div class="row">
+        <?php if($feedback_repeater !=''){
+                foreach($feedback_repeater as $feedback_repeater_val){ ?>
                     <div class="col-sm-6 col-md-3 feedback-link">
-                        <a href="#" target="_blank">
-                            <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/yelp_brand.svg" alt="Yelp">
-                            <span>Read Feedback</span>
+          <?php if($feedback_repeater_val['_feedback_link'] !='' && $feedback_repeater_val['_feedback_image'] !=''){ ?>
+                    <a href="<?php echo $feedback_repeater_val['_feedback_link']['url']; ?>" target="_blank">
+                            <img src="<?php echo $feedback_repeater_val['_feedback_image']['url']; ?>" alt="<?php echo $feedback_repeater_val['_feedback_image']['alt']; ?>">
+                            <span><?php echo $feedback_repeater_val['_feedback_link']['title']; ?></span>
                             <span class="screen-reader-text">Opens a new window</span>
                         </a>
+              <?php } ?>
                     </div>
-                    <div class="col-sm-6 col-md-3 feedback-link">
-                        <a href="#" target="_blank">
-                            <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/gun-broker_brand.svg" alt="">
-                            <span>Read Feedback</span>
-                            <span class="screen-reader-text">Opens a new window</span>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3 feedback-link">
-                        <a href="#" target="_blank">
-                            <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/ebay_brand.svg" alt="">
-                            <span>Read Feedback</span>
-                            <span class="screen-reader-text">Opens a new window</span>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3 feedback-link">
-                        <a href="#" target="_blank">
-                            <img src="/LSB/wp-content/themes/childtwentytwentythree/assets/images/gun-auction_brand.png" alt="">
-                            <span>Read Feedback</span>
-                            <span class="screen-reader-text">Opens a new window</span>
-                        </a>
-                    </div>
+          <?php } 
+            } ?>
                 </div>
             </div>
         </section>

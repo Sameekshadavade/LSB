@@ -104,3 +104,4 @@ function create_posttype_testimonial() {
   }
   add_theme_support( 'post-thumbnail' );
   add_action( 'init', 'create_posttype_testimonial' );
+  add_filter( 'big_image_size_threshold', '__return_false' );

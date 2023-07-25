@@ -2583,16 +2583,8 @@ h2.section-heading span {
     background-image: url(../images/hero-consignment-lg.jpg);
   }
 }
-.banner-section.about {
-  background-image: url(../images/hero-about-sm.jpg);
-}
 .banner-section.about .lsb-brand {
   max-width: 200px;
-}
-@media (min-width: 768px) {
-  .banner-section.about {
-    background-image: url(../images/hero-about-lg.jpg);
-  }
 }
 .banner-section.process {
   background-image: url(../images/hero-process-sm.jpg);
