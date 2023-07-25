@@ -2016,6 +2016,57 @@ section.showcase
   font-weight: 700;
 }
 
+/* Main Banner Slider CSS */
+.n2-ss-slide{
+  background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/tiles/2x2-stripe-tile.png) repeat center center rgba(44,25,0,.2);
+  }
+  .left-side-img{
+    
+    border: 2px solid #2c1a00;
+    box-shadow: 0 0 50px rgba(44,26,0,.75);
+  }
+  .sold-price h3 {
+    color: var(--color-primary)!important;
+    font-weight: 700;
+    font-size: 2rem!important;
+    background: #fff;
+    max-width: 250px;
+    margin: 10px auto!important;
+    border: 1px solid var(--color-primary);
+  }
+  .sold-price h3 span {
+    color: #fff;
+    display: block;
+    max-width: 250px;
+    font-size: 50%;
+    margin: auto;
+    font-style: oblique;
+    padding: 0.5rem 0;
+    background: var(--color-primary);
+  }
+  @media (min-width: 992px){
+    .sold-price h3 {
+      font-size: 2.5rem!important;
+    }
+  }
+  .home-banner-newsletter input[type=email] {
+    height: 35px;
+    background: #fff;
+    padding: 0.5rem 1rem!important;
+    border: 1px solid #7d0000;
+  }
+  .home-banner-newsletter input[type=submit]{
+    background: #7d0000;
+    opacity: 1;
+    padding: 10px 30px 10px 30px;
+    box-shadow: none;
+    border: 0px solid RGBA(0,0,0,1);
+    margin-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0px;
+  }
+
 /* ---------client-review-slider-section-css------------- */
 .banner {
   width: 100%;
@@ -2737,46 +2788,108 @@ ul.circle-checkmark li::before {
   font-size: 1rem;
 }
 
-
-/* Main Slider CSS */
-
-.n2-ss-slide{
-/* background: radial-gradient(circle,rgba(17,13,3,.65) 5%,rgba(17,13,3,.65) 32%,rgba(17,13,3,.85) 100%);*/
-background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/tiles/2x2-stripe-tile.png) repeat center center rgba(44,25,0,.2);
+/*--------------------------------------------------------------
+# Our Staff Page Css
+--------------------------------------------------------------*/
+.our-staff-block .staff-bio {
+  text-align: left;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 15px solid #c9b9a3
 }
-
-
-.left-side-img{
-  
-  border: 2px solid #2c1a00;
-  box-shadow: 0 0 50px rgba(44,26,0,.75);
+.our-staff-block .staff-bio:last-of-type {
+  border: none
 }
-
-
-.sold-price h3 {
-  color: var(--color-primary)!important;
-  font-weight: 700;
-  font-size: 2rem!important;
-  background: #fff;
-  max-width: 250px;
-  margin: 10px auto!important;
-  border: 1px solid var(--color-primary);
-}
-.sold-price h3 span {
-  color: #fff;
-  display: block;
-  max-width: 250px;
-  font-size: 50%;
-  margin: auto;
-  font-style: oblique;
-  padding: 0.5rem 0;
-  background: var(--color-primary);
-}
-@media (min-width: 992px){
-  .sold-price h3 {
-    font-size: 2.5rem!important;
+@media (min-width: 768px) {
+  .our-staff-block .staff-bio:nth-last-child(2) {
+      border:none
   }
 }
-li.widget_block {
-  list-style: none;
+.our-staff-block .staff-bio header {
+  text-align: center
+}
+@media (min-width: 768px) {
+  .our-staff-block .staff-bio header {
+      text-align:left
+  }
+}
+@media (min-width: 992px) {
+  .our-staff-block .staff-bio header {
+      display:flex;
+      align-items: center;
+      justify-content: flext-start;
+      text-align: left
+  }
+}
+@media (min-width: 992px) {
+  .our-staff-block .staff-bio header {
+      display:flex;
+      align-items: center;
+      justify-content: flext-start;
+      text-align: left
+  }
+}
+.our-staff-block .staff-bio header h2 {
+  text-transform: none;
+  margin-top: .5rem;
+  line-height: 1.25
+}
+@media (min-width: 992px) {
+  .our-staff-block .staff-bio header h2 {
+      text-align:left;
+      padding-left: 1.5rem;
+      margin-top: 0
+  }
+}
+.our-staff-block .staff-bio header h2 small {
+  display: block;
+  color: #2c1a00;
+  text-transform: uppercase;
+  font-size: 70%;
+  line-height: 1.5
+}
+.our-staff-block .staff-bio header div.headshot {
+  padding: .25rem;
+  border: 1px solid #2c1a00;
+  display: inline-block
+}
+@media (min-width: 992px) {
+  .our-staff-block .staff-bio header div.headshot {
+      display:block
+  }
+}
+.our-staff-block .staff-bio header div.headshot img {
+  width: 200px;
+  min-width: 200px;
+  min-height: 280px;
+  border: 1px solid #2c1a00
+}
+.our-staff-block .staff-bio p {
+  margin: 1rem 0 0 0
+}
+.our-staff-block .staff-bio header h2 small {
+  display: block;
+  color: #2c1a00;
+  text-transform: uppercase;
+  font-size: 70%;
+  line-height: 1.5
+}
+.our-staff-block .staff-bio header div.headshot {
+  padding: .25rem;
+  border: 1px solid #2c1a00;
+  display: inline-block
+}
+@media (min-width: 992px) {
+  .our-staff-block .staff-bio header div.headshot {
+      display:block
+  }
+}
+.our-staff-block .staff-bio header div.headshot img {
+  width: 200px;
+  min-width: 200px;
+  min-height: 280px;
+  border: 1px solid #2c1a00
+}
+.our-staff-block .staff-bio p {
+  margin: 1rem 0 0 0
 }
