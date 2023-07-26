@@ -764,7 +764,7 @@ ul.utility-section i.material-icons {
   .navbar > .menu-lsb-header-menu-container > ul > li::before {
     position: absolute;
     right: 14px;
-    top: 14px;
+    top: 20px;
     color: var(--color-white);
   }
   .mobile-nav-show {
@@ -925,9 +925,9 @@ li.widget_block {
 # Main Wrapper Area
 --------------------------------------------------------------*/
 .main-wrapper-area {
-  padding-top: 130px;
+  margin-top:130px;
 }
-
+.n2-ss-slider-3{margin-top:130px;}
 /*--------------------------------------------------------------
 # Home Page Css
 --------------------------------------------------------------*/
@@ -2196,7 +2196,7 @@ section.showcase
 /* ---------lsb-about-section-css------------- */
 .page-content {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0rem;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -2275,6 +2275,12 @@ header.page-header h1.page-title::after {
 .about-buy-sell > div a.cta {
   width: 100%;
   max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .about-buy-sell > div a.cta {
+    margin-bottom: 0;
+  }
 }
 
 .why-lsb-block ul {
@@ -2405,7 +2411,6 @@ h2.section-heading span {
   height: 100%;
 }
 .article-card-block.card {
-  padding: 0;
   margin: 0 0 2rem 0;
   background: 0 0;
   border: none;

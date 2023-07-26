@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <!-- ======= Start-Main-Area ======= -->
 <?php $home_banner_slider_shortcode = get_field('_home_banner_slider_shortcode'); ?>
-<div class="main-wrapper-area">
+<div class="main-wrapper-area mt-0">
     <!-- ======= Start-Banner-Area ======= -->
-    
+
     <?php echo do_shortcode($home_banner_slider_shortcode); ?>
-    
+
     <!-- ======= End-Banner-Area ======= -->
 <?php  
 
