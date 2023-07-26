@@ -30,8 +30,8 @@ $copyright_text = get_field('_copyright_text', 'option');
                     <?php foreach($social_icon_repeater as $social_icon_repeater_val){ ?>
                         <div class="social-links d-flex justify-content-center">
                           <?php if($social_icon_repeater_val['_icon_url'] !=''){ ?>
-                                  <a href="<?php $social_icon_repeater_val['_icon_url']; ?>" rel="noopener noreferrer" target="_blank">
-                                    <img src="<?php $social_icon_repeater_val['_icon_image']['url']; ?>" alt="Facebook Icon">
+                                  <a href="<?php echo $social_icon_repeater_val['_icon_url']; ?>" rel="noopener noreferrer" target="_blank">
+                                    <img src="<?php echo $social_icon_repeater_val['_icon_image']['url']; ?>" alt="Facebook Icon">
                                     </a>
                             <?php } ?>
                         </div>

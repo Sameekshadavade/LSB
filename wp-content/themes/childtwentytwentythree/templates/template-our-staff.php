@@ -1,4 +1,4 @@
-<?php /* Template Name: our staff Template */ ?>
+<?php /* Template Name: our staff Page */ ?>
 
 <?php get_header(); ?>
 <!-- ======= Start-Main-Area ======= -->
