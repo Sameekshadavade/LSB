@@ -2720,7 +2720,7 @@ h2.section-heading span {
   }
 }
 .banner-section.spencer {
-  background-image: url(../images/hero-spencer-sm.jpg);
+  background-image: url(../images/hero-spencer-lg.jpg);
 }
 .banner img {
   width: 100%;
@@ -2900,4 +2900,16 @@ ul.circle-checkmark li::before {
 }
 .our-staff-block .staff-bio p {
   margin: 1rem 0 0 0
+}
+
+/*--------------------------------------------------------------
+# Spencer Page Css
+--------------------------------------------------------------*/
+.spencer-img-block .headshot {
+  display: block;
+  max-width: 250px;
+  padding: .25rem;
+  margin: 0 auto 2rem auto;
+  border: 1px solid #2c1a00;
+  width: 100%;
 }
