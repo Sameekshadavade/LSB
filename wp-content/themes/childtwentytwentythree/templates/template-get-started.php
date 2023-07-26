@@ -16,8 +16,8 @@
 
     <div class="container page-content get-started-content">
         <section class="row decision-links mb-4">
-            <div class="col-lg-6 decision-link">
-                <div class="decision-link-content">
+            <div class="col-lg-6 action-link">
+                <div class="action-link-content">
                     <h2>I'm Here To Buy</h2>
                     <p>Whether you are looking for your first gun or to add to your collection, see how we are the
                         best option for
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-lg-6 decision-link">
-                <div class="decision-link-content">
+                <div class="action-link-content">
                     <h2>I'm Here To Sell</h2>
                     <p>If you are looking to sell a single item or an entire collection, learn how we are the
                         premier choice for
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </section>
-        <section class="row banner mid-banner mt-5">
+        <section class="banner mid-banner mt-5">
             <div class="banner-wrapper ">
                 <div class="banner-content">
                     <h4>We Are Only Satisfied When You Are Satisfied</h4>

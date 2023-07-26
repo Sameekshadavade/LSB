@@ -8,11 +8,7 @@
     <!-- ======= Start-Banner-Area ======= -->
     <section class="banner-section spencer">
         <div class="banner-content">
-            <a class="play-btn" href="https://www.youtube.com/watch?v=X3_kKr9RdQ0" alt="2013 SASS Hall Of Fame Induction Video" data-rel="lightbox-gallery-dbAp3AM1" data-magnific_type="video" data-rl_title="" data-rl_caption="" title="">
-                <img src="http://localhost/Lsb/wp-content/uploads/2023/07/icon-youtube-white.svg" alt="Play Video">
-            </a>
-            <p>Click Here To Play</p>
-            <h2>2013 SASS Hall Of Fame Induction Video</h2>
+            <h2>We make turning your guns into cash <em>easy!</em></h2>
         </div>
     </section>
     <!-- ======= End-Banner-Area ======= -->
@@ -20,62 +16,201 @@
     <div class="container page-content">
         <section class="common-header mb-5">
             <header class="page-header">
-                <h1 class="page-title">Spencer "Lead Dispencer" Hoglund</h1>
+                <h1 class="page-title">ACQUISITION PROCESS</h1>
             </header>
+            <div class="summary-opening col-md-8 offset-md-2 mb-0">
+                <p>
+                    At Lock Stock & Barrel, we turn your guns into cash and we make it easy on you. Our goal is to
+                    deliver you the most money possible for your items, all while making the process stress free and
+                    painless for you. We take care of all the work, details and legal compliance; all you need to do is
+                    bring the guns to us or <a href="/sell">schedule an appointment</a> for us to come to you.
+                </p>
+            </div>
         </section>
-        <div class="our-staff-block pt-5">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="spencer-img-block">
-                        <img class="headshot" src="http://localhost/Lsb/wp-content/uploads/2023/07/single-user-img.jpg" alt="">
-                    </div>
+
+        <section class="row acquisition-team-members mb-5">
+            <div class="col-12">
+                <h2>Our Acquisition Team</h2>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-4 col-lg">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_spencer-hoglund.jpg"
+                        alt="Spencer Hoglund" />
                 </div>
-                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
-                    <div class="spencer-content-block">
+                <h3>
+                    Spencer Hoglund
+                    <small>Lock Stock & Barrel</small>
+                </h3>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-4 col-lg">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_spencer-hoglund.jpg"
+                        alt="Spencer Hoglund" />
+                </div>
+                <h3>
+                    Spencer Hoglund
+                    <small>Lock Stock & Barrel</small>
+                </h3>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-4 col-lg">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_spencer-hoglund.jpg"
+                        alt="Spencer Hoglund" />
+                </div>
+                <h3>
+                    Spencer Hoglund
+                    <small>Lock Stock & Barrel</small>
+                </h3>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-4 col-lg">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_spencer-hoglund.jpg"
+                        alt="Spencer Hoglund" />
+                </div>
+                <h3>
+                    Spencer Hoglund
+                    <small>Lock Stock & Barrel</small>
+                </h3>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-4 col-lg">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_spencer-hoglund.jpg"
+                        alt="Spencer Hoglund" />
+                </div>
+                <h3>
+                    Spencer Hoglund
+                    <small>Lock Stock & Barrel</small>
+                </h3>
+            </div>
+
+
+
+        </section>
+        <section class="row acquisition-team-members mb-5">
+            <div class="col-12">
+                <h2>Road Trip Leaders</h2>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-3">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_rick_powell.jpg"
+                        alt="Rick Powell" />
+                </div>
+                <h3 class="h2-as-h5">
+                    Rick Powell
+                </h3>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-3">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_rick_powell.jpg"
+                        alt="Rick Powell" />
+                </div>
+                <h3 class="h2-as-h5">
+                    Rick Powell
+                </h3>
+            </div>
+            <div class="team-member col-12 col-sm-6 col-md-3">
+                <div class="img-box">
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/headshots/hs_rick_powell.jpg"
+                        alt="Rick Powell" />
+                </div>
+                <h3 class="h2-as-h5">
+                    Rick Powell
+                </h3>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col mt-4">
+                <h2 class="section-heading"><span>What To Expect</span></h2>
+                <div class="summary-opening col-md-8 offset-md-2 mb-0">
+                    <p>
+                        We&rsquo;ve prepared a printable checklist you can use to prepare your items for us!<br />Click
+                        the button below to get it.
+                    </p>
+                    <a href="/wp-content/themes/lsb-auctions/dist/assets/downloads/lsb-acquisition-checklist.pdf"
+                        download="lsb-acquisition-checklist.pdf" class="cta">Download Checklist</a>
+                </div>
+            </div>
+        </section>
+        <section class="row consignment-details mt-5">
+            <div class="col-md-6">
+                <figure>
+                    <img class='w-100'
+                        src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/supporting/connecticut-model-21_537x335.jpg"
+                        alt="Connecticut Shotgun Model 21">
+                    <figcaption>Connecticut Shotgun Model 21 – <em>Sold For: $25,550</em></figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>
+                        <h3>We Will Be On-time or Early</h3>
                         <p>
-                            Spencer Hoglund was born and raised in the San Fernando Valley, California. Spencer has focused much of his
-                            life
-                            on his dual passions of competitive shooting and gun collecting. He has traveled the World, competing and
-                            making
-                            friends across 18 countries, and over 40 states. But Spencer’s true notoriety came under a different name...
+                            If we're coming early, have coffee ready.
+                            If we're coming late, excuse our appearance!
                         </p>
+                    </li>
+                    <li>
+                        <h3>We Will Be Faster Than You Expect</h3>
                         <p>
-                            Lead Dispencer; It’s one of the best aliases in Cowboy Action Shooting, and certainly one befitting a World
-                            Champion. In the smoky, fast-paced, high adrenaline world of Cowboy Action Shooting, no name draws greater
-                            respect from fans, or fear, from opponents, than Spencer’s.
+                            It takes us about 1-3 minutes per gun to fill out the paperwork, so we won't take up too
+                            much of your time.
                         </p>
+                    </li>
+                    <li>
+                        <h3>
+                            We Bring Our Own Packing Materials
+                        </h3>
                         <p>
-                            After competing in Sporting Clays, Spencer Hoglund, aka Lead Dispencer, became a three-time Overall SASS World
-                            Champion (6 Time Category Winner), a Five Time Overall SASS National Champion, and his State, Regional, and
-                            local wins too numerous to be listed here. Many familiar with the evolution of the sport will tell you that
-                            Spencer changed the game. Spencer was for the 2000’s what China Camp was for the 1990’s, and when you see no
-                            one
-                            over 30 in the top 20 at “End of Trail” – you can thank Spencer for that.
+                            It's best to use our own for the safety of your consignment. We can use your packing
+                            material if absolutely necessary, but we don't suggest it. <strong>(Note: this does not
+                                apply to factory or valuable boxes/cases. We definitely want those!)</strong>
                         </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 order-md-last mt-5">
+                <figure>
+                    <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/supporting/colt-model-1905_537x335.jpg"
+                        alt="Colt Model 1905">
+                    <figcaption>Colt Model 1905 – <em>Sold For: $12,025</em></figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6 mt-5">
+                <ul>
+                    <li>
+                        <h3>To Consign or Not to Consign</h3>
                         <p>
-                            Top Shot, Sons Of Guns, American guns, Triggers, American Shooter, Shooting USA, Cowboys, Catch 22, The Wild,
-                            Wild, West... are some of his television appearances alone, showcasing his incomparable skills with a rifle,
-                            pistol, and shotgun.
+                            Try to decide if you'd like to sell or consign your guns before we arrive.
                         </p>
+                    </li>
+                    <li>
+                        <h3>Have All Your Items in One Place</h3>
                         <p>
-                            In addition to his shooting career, Spencer was quite an athlete, having been the Team Captain of the
-                            California
-                            State University Northridge Water Ski Team, where he earned his Undergraduate degree, graduating Summa Cum
-                            Laude.
+                            It's VERY helpful (and ultimately more valuable) if you have matched your gun with all of
+                            its accessories: bayonet, box/case, scope, rings, holster.
                         </p>
+                    </li>
+                    <li>
+                        <h3>
+                            Have a Current Photo ID Ready
+                        </h3>
                         <p>
-                            Spencer continued his education by earning his Master’s in Business Administration, at Pepperdine University’s
-                            Graziadio School of Business – where he graduated second in his class.
+                            We will need to make a copy of your photo ID for our paperwork.
                         </p>
-                        <p>
-                            Now, he heads up the crew at Lock Stock and Barrel Investments. The idea for an internet firearms and
-                            accessories retailer, combined with an ebay outlet was his, and has been both rewarding and challenging.
-                            Spencer’s nature is to always be prepared for that next challenge.
-                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="row mt-5">
+            <div class="col">
+                <div class="banner-cta">
+                    <div>
+                        <a href="/sell" class="cta">Get Started Here!</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
 
 </div>

@@ -935,6 +935,7 @@ li.widget_block {
 --------------------------------------------------------------*/
 
 /* ---------auction-partner-section-css------------- */
+
 .auctions-partner-section {
   margin: 0 !important;
   gap: 4px;
@@ -2713,8 +2714,11 @@ h2.section-heading span {
     background-image: url(../images/hero-contact-lg.jpg);
   }
 }
+.banner-section.careers {
+  background-image: url(../images/hero-about-lg.jpg);
+}
 .banner-section.sell {
-  background-image: url(../images/hero-sell-sm.jpg);
+  background-image: url(../images/hero-sell-lg.jpg);
 }
 @media (min-width: 768px) {
   .banner-section.sell {
@@ -2961,27 +2965,28 @@ ul.company-info li:first-of-type {
   margin-bottom: 0;
 }
 @media (max-width: 576px) {
-  .decision-link {
+  .action-link {
     padding: 0;
   }
 }
-.decision-link-content {
+.action-link-content {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2.2rem;
   background: #c9b9a3;
   border: 10px solid #fff3d7;
+  min-height: 370px;
 }
-.decision-link-content a.cta {
+.action-link-content a.cta {
   margin-bottom: 0;
 }
-.decision-link-content h2 {
+.action-link-content h2 {
   color: #2c1a00;
   text-align: center;
   font-weight: 700;
 }
 .mid-banner .banner-wrapper {
-  background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/svg/banner-flourish_rectangle.svg)
-    no-repeat center center #2c1a00;
+  background: url(../images/banner-flourish_rectangle.svg) no-repeat center
+    center #2c1a00;
 }
 
 /*--------------------------------------------------------------
@@ -2996,6 +3001,7 @@ ul.company-info li:first-of-type {
 }
 .privacy-content summary div {
   background: #fff;
+  display: flex;
 }
 .privacy-content summary {
   display: block;
@@ -3009,6 +3015,8 @@ ul.company-info li:first-of-type {
   padding: 0 5px;
   font-size: 16px;
   border-bottom: 0;
+  width: 100%;
+  text-transform: initial;
 }
 .privacy-content summary p {
   text-align: right;
@@ -3020,12 +3028,209 @@ ul.company-info li:first-of-type {
 .privacy-content summary div:after {
   cursor: pointer;
   content: "";
-  background: url(https://lsbauctions.com/wp-content/plugins/complianz-gdpr-premium/assets/images/chevron-down.svg)
-    no-repeat;
+  background: url(../images/chevron-down.svg) no-repeat;
   transform: rotate(0);
   transition: all 0.5s ease;
   background-size: cover;
   height: 18px;
   width: 18px;
   margin: 3px;
+}
+
+/*--------------------------------------------------------------
+# Careers Page Css - Yog
+--------------------------------------------------------------*/
+
+.banner-section .lsb-logo {
+  max-width: 200px;
+}
+.careers .job-listing {
+  width: 100%;
+  text-align: left;
+  padding: 0 0 4rem 0;
+}
+.job-listing h2 {
+  font-size: 1.5rem;
+}
+.careers .job-listing .cta {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Acquisition Page Css - Yog
+--------------------------------------------------------------*/
+
+.summary-opening {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section.acquisition-team-members {
+  justify-content: center;
+  margin-top: 0;
+}
+
+section.acquisition-team-members h2 {
+  text-align: center;
+}
+
+section.acquisition-team-members .team-member {
+  padding: 0 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 576px) {
+  section.acquisition-team-members .team-member {
+    padding: 0 15px;
+    max-width: 222px;
+  }
+}
+
+section.acquisition-team-members .team-member .img-box {
+  max-width: 250px;
+  padding: 0.25rem;
+  margin: 0 auto 0.5rem;
+  border: 1px solid #2c1a00;
+}
+
+section.acquisition-team-members .team-member .img-box img {
+  border: 1px solid #2c1a00;
+  width: 100%;
+}
+
+section.acquisition-team-members .team-member h3 {
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  max-width: 250px;
+  margin: auto;
+}
+
+@media (min-width: 576px) {
+  section.acquisition-team-members .team-member h3 {
+    font-size: 1.25rem;
+  }
+}
+
+section.acquisition-team-members .team-member h3 small {
+  display: block;
+  font-size: 80%;
+  color: #2c1a00;
+  margin-top: 0.25rem;
+}
+
+.consignment-details figure {
+  margin: 0 0 2rem;
+}
+
+.consignment-details figure img {
+  border: 10px solid #2c1a00;
+}
+
+.consignment-details figure figcaption {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+
+.consignment-details figure figcaption em {
+  color: #7d0000;
+}
+
+.consignment-details ul {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .consignment-details ul {
+    padding-bottom: 2rem;
+  }
+}
+
+.consignment-details ul li {
+  margin-bottom: 3rem;
+}
+
+.consignment-details h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.15rem;
+  margin-top: 0;
+}
+
+.banner-cta {
+  border: 1px solid #2c1a00;
+  padding: 4px;
+}
+
+.banner-cta div {
+  text-align: center;
+  background: rgba(44, 26, 0, 0.1);
+  border: 1px solid #2c1a00;
+}
+
+/*--------------------------------------------------------------
+# Auction Page Css - Yog
+--------------------------------------------------------------*/
+.auction-listing {
+  padding-top: 2rem;
+}
+
+.auction-listing img {
+  display: block;
+  width: auto;
+  height: 70px;
+  margin: 0 auto 2rem;
+}
+
+.auction-listing a.auction-btn-link {
+  display: block;
+  align-items: center;
+  position: relative;
+  color: #fff3d7;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #2c1a00;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.auction-listing a.auction-btn-link:hover {
+  padding-left: 70px;
+}
+
+.auction-listing a.auction-btn-link:hover i.material-icons {
+  width: 80px;
+}
+
+.auction-listing a.auction-btn-link span {
+  flex: 3;
+}
+
+.auction-listing a.auction-btn-link i.material-icons {
+  height: 50px;
+  width: 0;
+  overflow: hidden;
+  line-height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #7d0000;
+  transition: all 0.3s;
+}
+
+.auction-listing h3 {
+  text-transform: none;
+  padding: 0 0 0.5rem 0;
+  margin: 1rem 0 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.auction-listing p {
+  margin: 0 0 1rem 0;
 }
