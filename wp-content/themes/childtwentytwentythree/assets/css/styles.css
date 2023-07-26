@@ -925,9 +925,11 @@ li.widget_block {
 # Main Wrapper Area
 --------------------------------------------------------------*/
 .main-wrapper-area {
-  margin-top:130px;
+  margin-top: 130px;
 }
-.n2-ss-slider-3{margin-top:130px;}
+.n2-ss-slider-3 {
+  margin-top: 130px;
+}
 /*--------------------------------------------------------------
 # Home Page Css
 --------------------------------------------------------------*/
@@ -2020,55 +2022,55 @@ section.showcase
 }
 
 /* Main Banner Slider CSS */
-.n2-ss-slide{
-  background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/tiles/2x2-stripe-tile.png) repeat center center rgba(44,25,0,.2);
-  }
-  .left-side-img{
-    
-    border: 2px solid #2c1a00;
-    box-shadow: 0 0 50px rgba(44,26,0,.75);
-  }
+.n2-ss-slide {
+  background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/tiles/2x2-stripe-tile.png)
+    repeat center center rgba(44, 25, 0, 0.2);
+}
+.left-side-img {
+  border: 2px solid #2c1a00;
+  box-shadow: 0 0 50px rgba(44, 26, 0, 0.75);
+}
+.sold-price h3 {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  font-size: 2rem !important;
+  background: #fff;
+  max-width: 250px;
+  margin: 10px auto !important;
+  border: 1px solid var(--color-primary);
+}
+.sold-price h3 span {
+  color: #fff;
+  display: block;
+  max-width: 250px;
+  font-size: 50%;
+  margin: auto;
+  font-style: oblique;
+  padding: 0.5rem 0;
+  background: var(--color-primary);
+}
+@media (min-width: 992px) {
   .sold-price h3 {
-    color: var(--color-primary)!important;
-    font-weight: 700;
-    font-size: 2rem!important;
-    background: #fff;
-    max-width: 250px;
-    margin: 10px auto!important;
-    border: 1px solid var(--color-primary);
+    font-size: 2.5rem !important;
   }
-  .sold-price h3 span {
-    color: #fff;
-    display: block;
-    max-width: 250px;
-    font-size: 50%;
-    margin: auto;
-    font-style: oblique;
-    padding: 0.5rem 0;
-    background: var(--color-primary);
-  }
-  @media (min-width: 992px){
-    .sold-price h3 {
-      font-size: 2.5rem!important;
-    }
-  }
-  .home-banner-newsletter input[type=email] {
-    height: 35px;
-    background: #fff;
-    padding: 0.5rem 1rem!important;
-    border: 1px solid #7d0000;
-  }
-  .home-banner-newsletter input[type=submit]{
-    background: #7d0000;
-    opacity: 1;
-    padding: 10px 30px 10px 30px;
-    box-shadow: none;
-    border: 0px solid RGBA(0,0,0,1);
-    margin-top: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 0px;
-  }
+}
+.home-banner-newsletter input[type="email"] {
+  height: 35px;
+  background: #fff;
+  padding: 0.5rem 1rem !important;
+  border: 1px solid #7d0000;
+}
+.home-banner-newsletter input[type="submit"] {
+  background: #7d0000;
+  opacity: 1;
+  padding: 10px 30px 10px 30px;
+  box-shadow: none;
+  border: 0px solid RGBA(0, 0, 0, 1);
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px;
+}
 
 /* ---------client-review-slider-section-css------------- */
 .banner {
@@ -2704,7 +2706,7 @@ h2.section-heading span {
   }
 }
 .banner-section.contact {
-  background-image: url(../images/hero-contact-sm.jpg);
+  background-image: url(../images/hero-contact-lg.jpg);
 }
 @media (min-width: 768px) {
   .banner-section.contact {
@@ -2803,50 +2805,50 @@ ul.circle-checkmark li::before {
   text-align: left;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
-  border-bottom: 15px solid #c9b9a3
+  border-bottom: 15px solid #c9b9a3;
 }
 .our-staff-block .staff-bio:last-of-type {
-  border: none
+  border: none;
 }
 @media (min-width: 768px) {
   .our-staff-block .staff-bio:nth-last-child(2) {
-      border:none
+    border: none;
   }
 }
 .our-staff-block .staff-bio header {
-  text-align: center
+  text-align: center;
 }
 @media (min-width: 768px) {
   .our-staff-block .staff-bio header {
-      text-align:left
+    text-align: left;
   }
 }
 @media (min-width: 992px) {
   .our-staff-block .staff-bio header {
-      display:flex;
-      align-items: center;
-      justify-content: flext-start;
-      text-align: left
+    display: flex;
+    align-items: center;
+    justify-content: flext-start;
+    text-align: left;
   }
 }
 @media (min-width: 992px) {
   .our-staff-block .staff-bio header {
-      display:flex;
-      align-items: center;
-      justify-content: flext-start;
-      text-align: left
+    display: flex;
+    align-items: center;
+    justify-content: flext-start;
+    text-align: left;
   }
 }
 .our-staff-block .staff-bio header h2 {
   text-transform: none;
-  margin-top: .5rem;
-  line-height: 1.25
+  margin-top: 0.5rem;
+  line-height: 1.25;
 }
 @media (min-width: 992px) {
   .our-staff-block .staff-bio header h2 {
-      text-align:left;
-      padding-left: 1.5rem;
-      margin-top: 0
+    text-align: left;
+    padding-left: 1.5rem;
+    margin-top: 0;
   }
 }
 .our-staff-block .staff-bio header h2 small {
@@ -2854,52 +2856,52 @@ ul.circle-checkmark li::before {
   color: #2c1a00;
   text-transform: uppercase;
   font-size: 70%;
-  line-height: 1.5
+  line-height: 1.5;
 }
 .our-staff-block .staff-bio header div.headshot {
-  padding: .25rem;
+  padding: 0.25rem;
   border: 1px solid #2c1a00;
-  display: inline-block
+  display: inline-block;
 }
 @media (min-width: 992px) {
   .our-staff-block .staff-bio header div.headshot {
-      display:block
+    display: block;
   }
 }
 .our-staff-block .staff-bio header div.headshot img {
   width: 200px;
   min-width: 200px;
   min-height: 280px;
-  border: 1px solid #2c1a00
+  border: 1px solid #2c1a00;
 }
 .our-staff-block .staff-bio p {
-  margin: 1rem 0 0 0
+  margin: 1rem 0 0 0;
 }
 .our-staff-block .staff-bio header h2 small {
   display: block;
   color: #2c1a00;
   text-transform: uppercase;
   font-size: 70%;
-  line-height: 1.5
+  line-height: 1.5;
 }
 .our-staff-block .staff-bio header div.headshot {
-  padding: .25rem;
+  padding: 0.25rem;
   border: 1px solid #2c1a00;
-  display: inline-block
+  display: inline-block;
 }
 @media (min-width: 992px) {
   .our-staff-block .staff-bio header div.headshot {
-      display:block
+    display: block;
   }
 }
 .our-staff-block .staff-bio header div.headshot img {
   width: 200px;
   min-width: 200px;
   min-height: 280px;
-  border: 1px solid #2c1a00
+  border: 1px solid #2c1a00;
 }
 .our-staff-block .staff-bio p {
-  margin: 1rem 0 0 0
+  margin: 1rem 0 0 0;
 }
 
 /*--------------------------------------------------------------
@@ -2908,8 +2910,122 @@ ul.circle-checkmark li::before {
 .spencer-img-block .headshot {
   display: block;
   max-width: 250px;
-  padding: .25rem;
+  padding: 0.25rem;
   margin: 0 auto 2rem auto;
   border: 1px solid #2c1a00;
   width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Contact Page Css - Yog
+--------------------------------------------------------------*/
+
+ul.company-info {
+  list-style: none;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  ul.company-info {
+    padding-left: 10px;
+  }
+}
+ul.company-info li {
+  padding: 1rem 0 0 0;
+  border-top: 1px dotted #c9b9a3;
+}
+ul.company-info li:first-of-type {
+  border: none;
+}
+
+/*--------------------------------------------------------------
+# Payments Page Css - Yog
+--------------------------------------------------------------*/
+
+.payment-title {
+  text-align: center;
+  color: #fff3d7;
+  padding: 1rem;
+  background: #2c1a00;
+}
+
+/*--------------------------------------------------------------
+# Get Started Page Css - Yog
+--------------------------------------------------------------*/
+
+.get-started-content {
+  position: relative;
+  top: -10rem;
+  padding-bottom: 0;
+}
+.get-started-content .mid-banner {
+  margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  .decision-link {
+    padding: 0;
+  }
+}
+.decision-link-content {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #c9b9a3;
+  border: 10px solid #fff3d7;
+}
+.decision-link-content a.cta {
+  margin-bottom: 0;
+}
+.decision-link-content h2 {
+  color: #2c1a00;
+  text-align: center;
+  font-weight: 700;
+}
+.mid-banner .banner-wrapper {
+  background: url(https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/svg/banner-flourish_rectangle.svg)
+    no-repeat center center #2c1a00;
+}
+
+/*--------------------------------------------------------------
+# Privacy Statement Page Css - Yog
+--------------------------------------------------------------*/
+
+.privacy-content h2 {
+  margin: 2rem 0 0;
+  font-size: 22px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.privacy-content summary div {
+  background: #fff;
+}
+.privacy-content summary {
+  display: block;
+  background: #fff;
+  margin: 5px 0;
+  padding: 5px 10px;
+  align-items: center;
+  justify-items: stretch;
+}
+.privacy-content summary h3 {
+  padding: 0 5px;
+  font-size: 16px;
+  border-bottom: 0;
+}
+.privacy-content summary p {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  border-bottom: 0;
+}
+.privacy-content summary div:after {
+  cursor: pointer;
+  content: "";
+  background: url(https://lsbauctions.com/wp-content/plugins/complianz-gdpr-premium/assets/images/chevron-down.svg)
+    no-repeat;
+  transform: rotate(0);
+  transition: all 0.5s ease;
+  background-size: cover;
+  height: 18px;
+  width: 18px;
+  margin: 3px;
 }
