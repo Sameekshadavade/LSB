@@ -1,12 +1,6 @@
-<?php /* Template Name: Articles Page */ ?>
+<?php /* Template Name: Articles */ ?>
 
 <?php get_header(); ?>
-
-
-
-
-
-
 
 
 

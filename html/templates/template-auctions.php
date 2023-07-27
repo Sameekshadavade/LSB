@@ -1,4 +1,4 @@
-<?php /* Template Name: Auctions Page */ ?>
+<?php /* Template Name: Auctions */ ?>
 
 <?php get_header(); ?>
 
@@ -22,7 +22,7 @@
 
         </section>
 
-        <section class="pt-5 mb-5">
+        <section class="auctions-section pt-5 mb-5">
             <div class="row">
                 <div class="col-md-8">
                     <h2>About The Auctions</h2>
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </section>
-        <section class="pt-4">
+        <section class="auctions-partner-section pt-4">
             <div class="row">
                 <h2 class="section-heading"><span>Current Auctions</span></h2>
                 <div class="col-md-4 auction-listing">
@@ -106,13 +106,5 @@
 
 </div>
 <!-- ======= End-Main-Area ======= -->
-
-
-
-
-
-
-
-
 
 <?php get_footer(); ?>

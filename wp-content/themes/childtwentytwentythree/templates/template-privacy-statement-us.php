@@ -5,8 +5,6 @@
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
 
-
-
     <div class="container page-content">
         <section class="common-header mb-5">
             <header class="page-header">
@@ -14,9 +12,7 @@
             </header>
         </section>
 
-
-
-        <section>
+        <section class="privacy-section">
             <div class="row">
                 <div class="col-12">
                     <div class="privacy-content">
@@ -25,7 +21,7 @@
                                 2023, and applies to citizens and legal permanent residents of the United
                                 States.</i><br /><br /></p>
                         <p>In this privacy statement, we explain what we do with the data we obtain about you via <a
-                                href="https://lsbauctions.com">https://lsbauctions.com</a>. We recommend you carefully
+                                href="#">https://lsbauctions.com</a>. We recommend you carefully
                             read this statement. In our processing we comply with the requirements of privacy
                             legislation. That means, among other things, that:
                         <ul>
@@ -367,7 +363,7 @@
                             94 W. Cochran St., Suite B<br />
                             Simi Valley, CA 93065<br />
                             United States<br />
-                            Website: <a href="https://lsbauctions.com">https://lsbauctions.com</a> <br />
+                            Website: <a href="#">https://lsbauctions.com</a> <br />
                             Email: <span
                                 class="cmplz-obfuscate">moc&#046;&#x73;&#x6e;&#x6f;itcua&#098;&#115;&#108;&#x40;ofni</span>
                             <br />
@@ -377,10 +373,7 @@
                     </div>
                 </div>
             </div>
-
         </section>
-
-
 
     </div>
 

@@ -21,9 +21,7 @@
             </header>
         </section>
 
-
-
-        <section>
+        <section class="sell-section">
             <div class="row">
                 <div class="col-12">
                     <h2>What To Do Next?</h2>
@@ -42,20 +40,9 @@
             </div>
         </section>
 
-
-
-
     </div>
 
 </div>
 <!-- ======= End-Main-Area ======= -->
-
-
-
-
-
-
-
-
 
 <?php get_footer(); ?>

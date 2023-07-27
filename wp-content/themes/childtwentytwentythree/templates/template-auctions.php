@@ -1,4 +1,4 @@
-<?php /* Template Name: Auctions Page */ ?>
+<?php /* Template Name: Auctions */ ?>
 
 <?php get_header(); ?>
 
@@ -22,7 +22,7 @@
 
         </section>
 
-        <section class="pt-5 mb-5">
+        <section class="auctions-section pt-5 mb-5">
             <div class="row">
                 <div class="col-md-8">
                     <h2>About The Auctions</h2>
@@ -42,13 +42,12 @@
                 </div>
             </div>
         </section>
-        <section class="pt-4">
+        <section class="auctions-info pt-4">
+            <h2 class="section-heading"><span>Current Auctions</span></h2>
             <div class="row">
-                <h2 class="section-heading"><span>Current Auctions</span></h2>
                 <div class="col-md-4 auction-listing">
                     <a href="" target="_blank">
-                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/gun-broker_brand.svg"
-                            alt="GunBroker.com Logo">
+                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/gun-broker_brand.svg" alt="GunBroker.com Logo">
                     </a>
                     <a href="" class="auction-list-btn" target="_blank">
                         <i class="auction-icons bi-hammer"></i>
@@ -64,8 +63,7 @@
                 </div>
                 <div class="col-md-4 auction-listing">
                     <a href="" target="_blank">
-                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/ebay_brand.svg"
-                            alt="eBay Logo">
+                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/ebay_brand.svg" alt="eBay Logo">
                     </a>
                     <a href="" class="auction-list-btn" target="_blank">
                         <i class="auction-icons bi-hammer"></i>
@@ -81,13 +79,10 @@
                     </p>
                 </div>
                 <div class="col-md-4 auction-listing">
-                    <a href="https://www.gunbroker.com/Ammunition/search?Sort=4&IncludeSellers=423027&PageSize=96"
-                        target="_blank">
-                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/gun-broker_brand.svg"
-                            alt="GunBroker.com Logo">
+                    <a href="https://www.gunbroker.com/Ammunition/search?Sort=4&IncludeSellers=423027&PageSize=96" target="_blank">
+                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/gun-broker_brand.svg" alt="GunBroker.com Logo">
                     </a>
-                    <a href="https://www.gunbroker.com/Ammunition/search?Sort=4&IncludeSellers=423027&PageSize=96"
-                        class="auction-list-btn" target="_blank">
+                    <a href="https://www.gunbroker.com/Ammunition/search?Sort=4&IncludeSellers=423027&PageSize=96" class="auction-list-btn" target="_blank">
                         <i class="auction-icons bi-hammer"></i>
                         View Ammo Auctions
                     </a>
@@ -106,13 +101,5 @@
 
 </div>
 <!-- ======= End-Main-Area ======= -->
-
-
-
-
-
-
-
-
 
 <?php get_footer(); ?>

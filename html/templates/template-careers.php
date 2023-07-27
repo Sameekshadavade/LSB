@@ -23,10 +23,8 @@
             </header>
         </section>
 
-
-
         <div class="container page-content careers">
-            <section>
+            <section class="career-section">
                 <div class="row">
                     <div class="col-lg-12">
                         <article class="job-listing">
@@ -40,7 +38,6 @@
                             <a class="cta" href="">Learn More</a>
                         </article>
 
-
                         <article class="job-listing">
                             <header>
                                 <h2>
@@ -50,7 +47,6 @@
                             <p>SUMMARY: Lock Stock and Barrel is the premier West Coast [&hellip;]</p>
                             <a class="cta" href="">Learn More</a>
                         </article>
-
 
                         <article class="job-listing">
                             <header>
@@ -63,17 +59,11 @@
                             <a class="cta" href="">Learn More</a>
                         </article>
 
-
                     </div>
                 </div>
 
             </section>
         </div>
-
-
-
-
-
 
     </div>
 

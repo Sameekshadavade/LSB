@@ -13,9 +13,8 @@
     </section>
     <!-- ======= End-Banner-Area ======= -->
 
-
     <div class="container page-content get-started-content">
-        <section class="action-links mb-4">
+        <section class="action-links mb-5 pb-5">
             <div class='row'>
                 <div class="col-lg-6 action-link">
                     <div class="action-link-content">
@@ -48,10 +47,6 @@
             </div>
         </section>
     </div>
-
-
-
-
 
 </div>
 <!-- ======= End-Main-Area ======= -->

@@ -1,6 +1,6 @@
-<?php /* Template Name: contact us */ ?>
+<?php /* Template Name: Contact Us */ ?>
 
-<?php get_header(); ?>
+<?php // get_header(); ?>
 
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
@@ -19,7 +19,7 @@
                 <h1 class="page-title">CONTACT & DIRECTIONS</h1>
             </header>
         </section>
-        <section>
+        <section class="contact-section mt-5">
             <div class="row">
                 <div class="col-lg-8">
                     <h2>Contacting Us Is Easy</h2>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="map-section">
             <h2 class="section-heading"><span>Directions</span></h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15951.153226226705!2d-118.799773!3d34.282055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82ed289a4eb19%3A0x9d1a9ffda088bc1f!2sLock%20Stock%20%26%20Barrel%20Investments%20(Online%20store%20only)!5e1!3m2!1sen!2sus!4v1690356649402!5m2!1sen!2sus"
@@ -71,4 +71,4 @@
 </div>
 <!-- ======= End-Main-Area ======= -->
 
-<?php get_footer(); ?>
+<?php // get_footer(); ?>

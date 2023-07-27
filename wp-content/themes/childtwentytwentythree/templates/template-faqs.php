@@ -1,4 +1,4 @@
-<?php /* Template Name: FAQs Page */ ?>
+<?php /* Template Name: FAQs */ ?>
 
 <?php get_header(); ?>
 
@@ -10,7 +10,7 @@
                 <h1 class="page-title">FREQUENTLY ASKED QUESTIONS</h1>
             </header>
         </section>
-        <section>
+        <section class="faq-section pt-5">
             <div class="row">
                 <div class="col-lg-7">
                     <p>We are here to help in anyway we can. Below are a list of the most frequently asked questions.

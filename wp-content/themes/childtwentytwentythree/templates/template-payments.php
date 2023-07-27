@@ -13,16 +13,14 @@
             </header>
         </section>
 
-
-
-        <section>
+        <section class="payment-form-section">
             <div class="row">
                 <div class="col-sm-12 mt-5">
                     <h2>We appreciate your business</h2>
                     <p>
                         Please use the form below to make a safe and secure payment to Lock, Stock &amp; Barrel.
                         If you should have any issues with your transaction, you can either <a
-                            class='text-decoration-underline' href="contact-us">contact us
+                            class='text-decoration-underline' href="#">contact us
                             here</a>
                         or
                         give us a call at <strong>805-285-0715</strong> and our friendly staff will be happy to
@@ -34,9 +32,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
     </div>
 
