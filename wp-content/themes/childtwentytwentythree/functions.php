@@ -130,3 +130,31 @@ $LegalMenu = array(
   'class' => 'legal-widgt-class'
 );
 register_sidebar($LegalMenu);
+
+// Testimonial custom post type
+function create_posttype_careers() {
+  register_post_type( 'careers',
+    array(
+      'labels' => array(
+        'name' => __( 'Careers' ),
+        'singular_name' => __( 'Careers' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'careers'),
+      'supports' => array('title','editor','thumbnail', 'comments')
+    )
+  );
+  register_taxonomy(
+        'careers-category',
+        'careers',
+        array(
+            'label' => __( 'Category' ),
+            'rewrite' => array( 'slug' => 'careers-category' ),
+            'hierarchical' => true,
+        )
+    );
+}
+add_theme_support( 'post-thumbnail' );
+add_action( 'init', 'create_posttype_careers' );
+

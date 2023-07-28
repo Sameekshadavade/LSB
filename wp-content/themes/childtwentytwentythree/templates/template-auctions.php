@@ -1,104 +1,90 @@
 <?php /* Template Name: Auctions */ ?>
 
 <?php get_header(); ?>
-
-
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
+<?php  
+$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID) );
 
-    <!-- ======= Start-Banner-Area ======= -->
-    <section class="banner-section spencer">
-        <div class="banner-content">
-            <h2>UNMATCHED SERVICE MAKES LSB THE BEST CHOICE FOR YOUR FIREARMS SHOPPING</h2>
-        </div>
-    </section>
-    <!-- ======= End-Banner-Area ======= -->
-
-    <div class="container page-content">
-        <section class="common-header ">
-            <header class="page-header mb-5">
-                <h1 class="page-title">AUCTIONS</h1>
-            </header>
-
+if($feat_image !=''){
+?>
+        <!-- ======= Start-Banner-Area ======= -->
+        <section class="banner-section spencer" style="background-image: url(<?php echo $feat_image; ?>);">
+        <?php if (get_the_content() !=''){ ?>
+                <div class="banner-content">
+                    <?php echo the_content(); ?>
+                </div>
+        <?php } ?>
         </section>
+<?php 
+}
 
+$auctions_head_title = get_field('_auctions_head_title');
+$about__the_auction_title = get_field('_about__the_auction_title');
+$about_the_auction_content = get_field('_about_the_auction_content');
+$right_side_content_repater = get_field('_right_side_content_repater');
+
+?>
+    <!-- ======= End-Banner-Area ======= -->
+    <div class="container page-content">
+<?php if($auctions_head_title !=''){ ?>
+        <section class="common-header ">
+                <header class="page-header mb-5">
+                    <h1 class="page-title"><?php echo $auctions_head_title; ?></h1>
+                </header>
+            </section>
+<?php } ?>
         <section class="auctions-section pt-5 mb-5">
             <div class="row">
+      <?php if($about__the_auction_title !='' || $about_the_auction_content !=''){ ?>        
                 <div class="col-md-8">
-                    <h2>About The Auctions</h2>
-                    <p>
-                        With very rare exception, all of our items are offered to the open market at no reserve and no
-                        starting price. We sell with zero buyer&rsquo;s premium, so you only pay your high bid, shipping
-                        and sales tax (when applicable) – <em>NO HIDDEN OR ADDED FEES.</em>
-                    </p>
+                <?php if($about__the_auction_title !=''){ ?>
+                        <h2><?php echo $about__the_auction_title; ?></h2>
+                <?php } if($about_the_auction_content !=''){ echo $about_the_auction_content; } ?>
                 </div>
-                <div class="col-md-4">
-                    <ul class="circle-checkmark">
-                        <li>Detailed Descriptions</li>
-                        <li>Beautiful Images</li>
-                        <li>Fast Shipping</li>
-                        <li>No-questions-asked Returns</li>
-                    </ul>
-                </div>
+      <?php } if($right_side_content_repater !=''){ ?>
+                    <div class="col-md-4">
+                        <ul class="circle-checkmark">
+                    <?php foreach($right_side_content_repater as $right_side_content_val ){ ?>
+                        <?php if($right_side_content_val['_about_auction_list'] !=''){ ?>
+                                    <li><?php echo $right_side_content_val['_about_auction_list']; ?></li>
+                        <?php } ?>
+                    <?php } ?>
+                        </ul>
+                    </div>
+        <?php } ?>
             </div>
         </section>
+<?php  
+
+$current_auctions_head_title = get_field('_current_auctions_head_title');
+$current_auction_repeater = get_field('_current_auction_repeater');
+
+if($current_auction_repeater !='' || $current_auctions_head_title !=''){
+
+?>
         <section class="auctions-info pt-4">
-            <h2 class="section-heading"><span>Current Auctions</span></h2>
+            <h2 class="section-heading"><span><?php echo $current_auctions_head_title; ?></span></h2>
             <div class="row">
+      <?php foreach($current_auction_repeater as $current_auction_repeater_val){ ?>
                 <div class="col-md-4 auction-listing">
-                    <a href="" target="_blank">
-                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/gun-broker_brand.svg" alt="GunBroker.com Logo">
+      <?php if($current_auction_repeater_val['_current_auction_link'] !='' || $current_auction_repeater_val['_current_auction_image'] !=''){ ?>        
+                <a href="<?php echo $current_auction_repeater_val['_current_auction_link']['url']; ?>" target="_blank">
+                        <img src="<?php echo $current_auction_repeater_val['_current_auction_image']['url']; ?>" alt="<?php echo $current_auction_repeater_val['_current_auction_image']['alt']; ?>">
                     </a>
-                    <a href="" class="auction-list-btn" target="_blank">
+                    <a href="<?php echo $current_auction_repeater_val['_current_auction_link']['url']; ?>" class="auction-list-btn" target="_blank">
                         <i class="auction-icons bi-hammer"></i>
-                        View Gun Auctions
+                        <?php echo $current_auction_repeater_val['_current_auction_link']['title']; ?>
                     </a>
-                    <h3>Premium Guns</h3>
-                    <p>
-                        We list all of our firearms on Gunbroker.com at 14-day auctions, completely turning over the
-                        inventory every two weeks. You will see 600-700 firearms listed at a time, selling on Sunday
-                        nights, at which time the new batch goes up. Be sure to check back at least once every two weeks
-                        so nothing gets by you.
-                    </p>
+      <?php } if($current_auction_repeater_val['_current_auction_title'] !=''){ ?>
+                    <h3><?php echo $current_auction_repeater_val['_current_auction_title']; ?></h3>
+                    <?php } if($current_auction_repeater_val['_current_auction_content'] !=''){ echo $current_auction_repeater_val['_current_auction_content']; } ?>
                 </div>
-                <div class="col-md-4 auction-listing">
-                    <a href="" target="_blank">
-                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/ebay_brand.svg" alt="eBay Logo">
-                    </a>
-                    <a href="" class="auction-list-btn" target="_blank">
-                        <i class="auction-icons bi-hammer"></i>
-                        View eBay Auctions
-                    </a>
-                    <h3>Shooting, Gun Parts, Collectibles, Reloading Accessories</h3>
-                    <p>
-                        Everything but guns and ammo can be found on eBay.com. From reloading equipment, holsters,
-                        scopes & gun parts to militaria and collectibles, you will find it on Ebay. We run 10-day
-                        auctions here, with about 500 items beginning every other Thursday and selling two Sundays
-                        later. We promise 1-2 day shipping on your eBay purchases and will eventually have whatever it
-                        is you have been looking for.
-                    </p>
-                </div>
-                <div class="col-md-4 auction-listing">
-                    <a href="https://www.gunbroker.com/Ammunition/search?Sort=4&IncludeSellers=423027&PageSize=96" target="_blank">
-                        <img src="https://lsbauctions.com/wp-content/themes/lsb-auctions/dist/assets/images/brands/gun-broker_brand.svg" alt="GunBroker.com Logo">
-                    </a>
-                    <a href="https://www.gunbroker.com/Ammunition/search?Sort=4&IncludeSellers=423027&PageSize=96" class="auction-list-btn" target="_blank">
-                        <i class="auction-icons bi-hammer"></i>
-                        View Ammo Auctions
-                    </a>
-                    <h3>Ammo &amp; Reloading Components</h3>
-                    <p>
-                        Ammo & Reloading components are listed on GunBroker.com. These auctions run on the same
-                        schedule, listing and selling concurrently with our gun auctions. So whether you are looking for
-                        single and rare cartridges, cases of shootable ammo or bullets, brass & components for
-                        reloading, we will have it for sale in our ammo auctions.
-                    </p>
-                </div>
+      <?php } ?>
             </div>
         </section>
-
+<?php } ?>
     </div>
-
 </div>
 <!-- ======= End-Main-Area ======= -->
 

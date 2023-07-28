@@ -1805,9 +1805,9 @@ h2.section-heading span {
     background-image: url(../images/hero-sell-lg.jpg);
   }
 }
-.banner-section.spencer {
+/* .banner-section.spencer {
   background-image: url(../images/hero-spencer-lg.jpg);
-}
+} */
 .banner img {
   width: 100%;
 }
@@ -1826,11 +1826,6 @@ h2.section-heading span {
 .banner-section.spencer p {
   color: #fff;
   text-shadow: 0 0 4px #2c1a00;
-}
-@media (min-width: 768px) {
-  .banner-section.spencer {
-    background-image: url(../images/hero-spencer-lg.jpg);
-  }
 }
 .note-block {
   font-style: oblique;
