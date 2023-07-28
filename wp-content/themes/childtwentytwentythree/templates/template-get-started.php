@@ -4,11 +4,17 @@
 
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
+<?php 
+                $get_satrt_title = get_field('get_satrt_title');
+                $get_start_banner_desktop_image = get_field('page_hero_image');
 
+
+            ?>
     <!-- ======= Start-Banner-Area ======= -->
-    <section class="banner-section get-started">
+    <section class="banner-section get-started" style="background-image:url(<?php echo $get_start_banner_desktop_image ['url']; ?>);">
         <div class="banner-content">
-            <h2>WHAT CAN WE HELP YOU WITH?</h2>
+          
+            <h2><?php echo $get_satrt_title; ?></h2>
         </div>
     </section>
     <!-- ======= End-Banner-Area ======= -->
@@ -18,7 +24,9 @@
             <div class='row'>
                 <div class="col-lg-6 action-link">
                     <div class="action-link-content">
-                        <h2>I'm Here To Buy</h2>
+                        
+                        <?php  $get_srepeater_tittle = get_field('repeater_tittle');?>
+                        <h2>repeater_tittle</h2>
                         <p>Whether you are looking for your first gun or to add to your collection, see how we are the
                             best option for completing your purchase - Without a Buyer’s Premium!</p>
                         <a href="/" class="cta">View Auctions</a>
