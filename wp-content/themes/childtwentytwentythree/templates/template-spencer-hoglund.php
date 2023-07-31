@@ -11,7 +11,7 @@ $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID) );
 <div class="main-wrapper-area">
     <!-- ======= Start-Banner-Area ======= -->
 <?php if($feat_image !=''){ ?>
-    <section class="banner-section spencer" style="<?php echo $feat_image; ?>" >
+    <section class="banner-section spencer" style="background-image: url('<?php echo $feat_image; ?>');">
         <div class="banner-content">
 <?php if($spencer_banner_youtube_link !=''){ ?>
             <a class="play-btn" target="__blank" href="<?php echo $spencer_banner_youtube_link; ?>" alt="2013 SASS Hall Of Fame Induction Video" data-rel="lightbox-gallery-dbAp3AM1" data-magnific_type="video" data-rl_title="" data-rl_caption="" title="">
