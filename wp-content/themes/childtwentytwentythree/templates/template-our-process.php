@@ -75,15 +75,15 @@ if($how_it_works_repeater !=''){
                 <h2 class="section-heading"><span><?php echo $how_it_works_head_title; ?></span></h2>
       <?php foreach($how_it_works_repeater as $how_it_works_repeater_val){ ?>        
                 <div class="col-md-6 process-step">
-                    <header>
+                <header>
           <?php if($how_it_works_repeater_val['_how_it_works_image'] !=''){ ?>   
                     <img src="<?php echo $how_it_works_repeater_val['_how_it_works_image']['url']; ?>" alt="<?php echo $how_it_works_repeater_val['_how_it_works_image']['alt']; ?>">
           <?php } if($how_it_works_repeater_val['_how_it_works_title'] !=''){ ?>
                     <h3><?php echo $how_it_works_repeater_val['_how_it_works_title']; ?></h3>
-          <?php } if($how_it_works_repeater_val['_how_it_works_content'] !=''){ ?>    
-                </header>
-                    <?php echo $how_it_works_repeater_val['_how_it_works_content']; ?>
-                </div>
+          <?php } ?>    
+                </header>    
+                <?php if($how_it_works_repeater_val['_how_it_works_content'] !=''){ echo $how_it_works_repeater_val['_how_it_works_content']; } ?>      
+            </div>
         <?php } ?>
             </div>
         </section>
@@ -91,4 +91,4 @@ if($how_it_works_repeater !=''){
     </div>
 </div>
 <!-- ======= End-Main-Area ======= -->
-<?php } get_footer(); ?>
+<?php get_footer(); ?>

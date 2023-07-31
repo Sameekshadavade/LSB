@@ -10,7 +10,7 @@ $sell_head_title = get_field('_sell_head_title');
 $what_to_do_title = get_field('_what_to_do_title');
 $what_to_do_content = get_field('_what_to_do_content');
 $seller_info_form_title = get_field('_seller_info_form_title');
-$seller_form_shortcode = get_field('_seller_form_shortcode');
+$seller_form_shortcode = get_field('__seller_form_shortcode');
 
 $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID) );
 
@@ -48,6 +48,10 @@ if($feat_image !=''){
             <?php } ?>
                 </div>
             </section>
+<?php } if($seller_form_shortcode !=''){ ?>
+        <div class="sell-form-shortcode">
+            <?php echo do_shortcode($seller_form_shortcode); ?>
+        </div>
 <?php } ?>
     </div>
 
