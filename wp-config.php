@@ -18,6 +18,8 @@
  * @package WordPress
  */
 define('FS_METHOD', 'direct');
+define( 'WP_HOME', 'http://localhost/Lsb/' );
+define( 'WP_SITEURL', 'http://localhost/Lsb/' );
 
 
 // ** Database settings - You can get this info from your web host ** //

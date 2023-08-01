@@ -80,10 +80,14 @@
 				        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 				        'format' => '?paged=%#%',
 				        'current' => max( 1, get_query_var('paged') ),
-				        'next_text'          => __('<i class="fa fa-arrow-right" aria-hidden="true"></i>'),
-				        'prev_text'          => __('<i class="fa fa-arrow-left" aria-hidden="true"></i>'),
+				        'next_text'          => __('<i class="fa fa-angle-double-right	
+                        " aria-hidden="true"></i>'),
+				        'prev_text'          => __('<i class="fa fa fa-angle-double-left	
+                        " aria-hidden="true"></i>'),
 				        'total' =>  $Post_Query->max_num_pages
-				   	) );?>
+				   	) );
+                    ?>
+                    
 				    </div>
 				</div>
     </div>
@@ -95,7 +99,9 @@
             </section>
             <section id="block-2" class="widget border-bottom widget_block">
                <ul>  <?php
-                  $categories = get_categories();
+               $cat =3;
+
+                  $categories = get_categories(array('parent' => $cat));
                   
                   foreach($categories as $category) {
                      echo '<li class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
