@@ -5,7 +5,7 @@
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
     <div class="container page-content">
-    <?php if(get_the_title() !=''){ ?>
+    <?php //if(get_the_title() !=''){ ?>
         <section class="common-header mb-5">
             <header class="page-header">
                 <h1 class="page-title"><?php the_title(); ?></h1>
@@ -13,7 +13,7 @@
         </section>
         <section class="faq-section pt-md-5 pt-sm-3">
             <div class="row">
-        <?php if(get_the_content() !=''){ ?>
+        <?php// if(get_the_content() !=''){ ?>
                 <div class="col-lg-7">
                     <div class="faq-description-block">
                         <p>We are here to help in anyway we can. Below are a list of the most frequently asked questions.
