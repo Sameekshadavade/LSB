@@ -158,3 +158,5 @@ function create_posttype_careers() {
 add_theme_support( 'post-thumbnail' );
 add_action( 'init', 'create_posttype_careers' );
 
+
+

@@ -142,6 +142,8 @@ $args = array(
     'post_type' => 'post',
     'order' => 'DESC',
     'post_status' => 'publish', 
+    'posts_per_page' => 6,
+
 );
 $Post_Query = new WP_Query($args);
 

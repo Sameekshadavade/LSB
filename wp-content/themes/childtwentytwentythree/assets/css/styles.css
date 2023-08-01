@@ -1303,11 +1303,11 @@ header.page-header h1.page-title::after {
 header.page-header h1.page-title::after {
   display: block;
   content: url(../images/heading_flourish.svg);
-  max-width: 80px;
+  max-width: 130px;
   margin: 0 auto;
   margin-bottom: 0;
   position: relative;
-  margin-bottom: -20px;
+  margin-bottom: -27px;
 }
 .about-buy-sell {
   display: block;
@@ -1650,7 +1650,7 @@ h2.section-heading span {
   content: "";
   display: block;
   flex: 1;
-  background: url(../images/1x1-dark-brown.gif) repeat-x center center;
+  background: url(../images/dark_brown.gif) repeat-x center center;
 }
 .cta-section-footer::before {
   margin-right: 1rem;
@@ -1754,6 +1754,12 @@ h2.section-heading span {
 .banner-section.about .lsb-brand {
   max-width: 200px;
 }
+@media (max-width: 767px) {
+  .banner-section.about .lsb-brand {
+    max-width: 90px;
+    margin-bottom: 10px;
+  }
+}
 .banner-section.process {
   background-image: url(../images/hero-process-sm.jpg);
 }
@@ -1819,6 +1825,12 @@ h2.section-heading span {
   max-width: 100px;
   opacity: 0.7;
   transition: opacity 0.3s;
+}
+@media (max-width: 767px) {
+  .banner-section.spencer a.play-btn img {
+    max-width: 60px;
+    margin-bottom: 10px;
+  }
 }
 .banner-section.spencer a.play-btn:hover img {
   opacity: 1;
@@ -2379,5 +2391,54 @@ section.our-team-members .team-person h3 small {
 @media (min-width: 768px) {
   .process-step p {
     padding: 0 1rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# FAQ Page Css -
+--------------------------------------------------------------*/
+.faq-list {
+  padding: 0;
+  margin-top: 3rem;
+}
+.faq-inner-block .accordion-item {
+  background: transparent;
+  border: none;
+}
+.faq-inner-block .accordion-header .accordion-button {
+  background: transparent;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid rgba(44, 26, 0, 0.4);
+  padding-bottom: 12px;
+  color: #7d0000;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+.faq-inner-block .accordion-header .accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.faq-inner-block .accordion-header .accordion-button.collapsed {
+  color: #2c1a00;
+}
+.faq-inner-block .accordion-collapse.collapse .accordion-body {
+  transition: all 0.3s ease-out;
+  background: rgba(201, 185, 163, 0.2);
+}
+.faq-inner-block .accordion-collapse.collapse .faq-title {
+  font-size: 1rem;
+  color: #7d0000;
+}
+.faq-inner-block .accordion-button.collapsed:after {
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+.faq-inner-block .accordion-button:not(.collapsed):after {
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .faq-sidebar {
+    margin-top: 2rem;
   }
 }
