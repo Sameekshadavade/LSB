@@ -2513,7 +2513,7 @@ section.our-team-members .team-person h3 small {
 @media (min-width: 768px) {
   .search-filter-block form.archive-search-form ul li:last-of-type {
     margin-top: 0;
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
 }
 .search-filter-block input,
@@ -2529,6 +2529,7 @@ textarea {
   height: 50px;
   width: 100%;
   padding: 0px 10px;
+  box-sizing: border-box;
 }
 .search-filter-block form.archive-search-form ul li input::-moz-placeholder {
   color: #2c1a00;
@@ -2557,11 +2558,6 @@ textarea {
 }
 .search-filter-block input[type="submit"]:hover {
   background: #b00000;
-}
-@media (max-width: 767px) {
-  .search-filter-block form.archive-search-form ul li input {
-    padding: 0;
-  }
 }
 .collection-block article.card.article-card-block {
   padding: 0px;

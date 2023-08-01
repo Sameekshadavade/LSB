@@ -131,4 +131,5 @@
    <!-- ======= End-inner-collection-Area ======= -->
 
 </div>
+<!-- ======= End-Main-Area ======= -->
 <?php get_footer(); ?>
