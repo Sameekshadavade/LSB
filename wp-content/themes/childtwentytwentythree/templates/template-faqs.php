@@ -18,7 +18,7 @@ $faq_form_shortcode = get_field('faq_form_shortcode');
 ?>
         <section class="faq-section pt-md-5 pt-sm-3">
             <div class="row">
-        <?php if(get_the_content() !=''){ ?>
+        <?php// if(get_the_content() !=''){ ?>
                 <div class="col-lg-7">
                     <div class="faq-description-block">
                         <?php the_content(); ?>
