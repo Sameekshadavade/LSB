@@ -5,20 +5,21 @@
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
     <div class="container page-content">
-    <?php //if(get_the_title() !=''){ ?>
+    <?php if(get_the_title() !=''){ ?>
         <section class="common-header mb-5">
             <header class="page-header">
                 <h1 class="page-title"><?php the_title(); ?></h1>
             </header>
         </section>
 <?php  
+}
 $faq_page_repeater = get_field('_faq_page_repeater_');
 $faq_form_shortcode = get_field('faq_form_shortcode');
 
 ?>
         <section class="faq-section pt-md-5 pt-sm-3">
             <div class="row">
-        <?php// if(get_the_content() !=''){ ?>
+        <?php if(get_the_content() !=''){ ?>
                 <div class="col-lg-7">
                     <div class="faq-description-block">
                         <?php the_content(); ?>
