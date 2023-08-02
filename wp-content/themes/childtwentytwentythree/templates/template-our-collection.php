@@ -115,7 +115,8 @@
                      </section>
                      <section id="block-2" class="widget border-bottom widget_block">
                         <ul> <?php
-                              $categories = get_categories();
+                        $cat=3;
+                              $categories = get_categories(array('parent' => $cat));
 
                               foreach ($categories as $category) {
                                  echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';

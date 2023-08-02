@@ -13,7 +13,6 @@
         </section>
 <?php  
 }
-
 $faq_page_repeater = get_field('_faq_page_repeater_');
 $faq_form_shortcode = get_field('faq_form_shortcode');
 
