@@ -4,32 +4,36 @@
 
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
+    <?php  
 
+$payment_head_title = get_field('_payment_head_title');
+$payment_content_details = get_field('_payment_content_details');
+$payment_form_title = get_field('_payment_form_title');
+$contact_info_title = get_field('_contact_info_title');
+$contact_info_shortcode = get_field('_contact_info_shortcode');
+$payment_info_title = get_field('_payment_info_title');
+$payment_info_shortcode_ = get_field('_payment_info_shortcode_');
 
+?>
     <div class="container page-content">
+        <?php if($payment_content_details !=''){ ?>
         <section class="common-header mb-5">
             <header class="page-header">
-                <h1 class="page-title">PAY FOR YOUR AUCTION</h1>
+                <h1 class="page-title"><?php echo $payment_head_title; ?></h1>
             </header>
         </section>
-
+        <?php } ?>
         <section class="payment-form-section">
             <div class="row">
+                <?php if($payment_content_details !=''){ ?>
                 <div class="col-sm-12 mt-5">
-                    <h2>We appreciate your business</h2>
-                    <p>
-                        Please use the form below to make a safe and secure payment to Lock, Stock &amp; Barrel.
-                        If you should have any issues with your transaction, you can either <a
-                            class='text-decoration-underline' href="#">contact us
-                            here</a>
-                        or
-                        give us a call at <strong>805-285-0715</strong> and our friendly staff will be happy to
-                        help.
-                    </p>
+                    <?php echo $payment_content_details; ?>
                 </div>
+                <?php } if($payment_form_title !=''){ ?>
                 <div class="col-12 mt-4">
-                    <h2 class="payment-title">Payment Form</h2>
+                    <h2 class="payment-title"><?php echo $payment_form_title; ?></h2>
                 </div>
+                <?php } ?>
             </div>
         </section>
 

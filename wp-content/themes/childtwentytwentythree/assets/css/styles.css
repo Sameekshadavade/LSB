@@ -1792,14 +1792,14 @@ h2.section-heading span {
     background-image: url(../images/hero-start-lg.jpg);
   }
 }
-.banner-section.contact {
+/* .banner-section.contact {
   background-image: url(../images/hero-contact-lg.jpg);
 }
 @media (min-width: 768px) {
   .banner-section.contact {
     background-image: url(../images/hero-contact-lg.jpg);
   }
-}
+} */
 .banner-section.careers {
   background-image: url(../images/hero-about-lg.jpg);
 }
