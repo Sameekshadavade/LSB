@@ -47,8 +47,10 @@
                     </div>
                     <?php if ($seller_info_form_title != '') { ?>
                         <div class="col-12 mt-4">
-                            <h2 class="payment-title"><?php echo $seller_info_form_title; ?></h2>
-                            <p class="required-field-block">"<span class="required-tag">*</span>" indicates required fields</p>
+                            <div class="sell-heading-block">
+                                <h2 class="payment-title"><?php echo $seller_info_form_title; ?></h2>
+                                <p class="required-field-block">"<span class="required-tag">*</span>" indicates required fields</p>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
@@ -59,7 +61,9 @@
                 <div class="form-title-block" data-js-reload="field_2_11">
                     <h3 class="sell-form-title">Contact Information</h3>
                 </div>
-                <?php echo do_shortcode($seller_form_shortcode); ?>
+                <div class="sell-from-block">
+                    <?php echo do_shortcode($seller_form_shortcode); ?>
+                </div>
             </div>
         <?php } ?>
     </div>

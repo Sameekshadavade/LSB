@@ -2544,7 +2544,7 @@ textarea {
 .search-filter-block form.archive-search-form ul li input::placeholder {
   color: #2c1a00;
 }
-.search-filter-block input[type="submit"] {
+input[type="submit"] {
   display: block;
   text-transform: uppercase;
   min-width: 150px;
@@ -2556,7 +2556,7 @@ textarea {
   border: none;
   transition: background-color 0.3s;
 }
-.search-filter-block input[type="submit"]:hover {
+input[type="submit"]:hover {
   background: #b00000;
 }
 .collection-block article.card.article-card-block {
@@ -2638,7 +2638,12 @@ textarea {
   width: 25px;
   content: url(../images/icon-triangle-right.svg);
 }
-.collection-widget-area ol a, .collection-widget-area ol a:active, .collection-widget-area ol a:visited, .collection-widget-area ul a, .collection-widget-area ul a:active, .collection-widget-area ul a:visited {
+.collection-widget-area ol a,
+.collection-widget-area ol a:active,
+.collection-widget-area ol a:visited,
+.collection-widget-area ul a,
+.collection-widget-area ul a:active,
+.collection-widget-area ul a:visited {
   color: #2c1a00;
 }
 .custom-pagination {
@@ -2666,4 +2671,175 @@ textarea {
 .custom-pagination .current {
   background: #7d0000;
   border: none;
+}
+
+/*--------------------------------------------------------------
+# Sell Page Css -
+--------------------------------------------------------------*/
+.sell-heading-block .required-field-block {
+  box-sizing: border-box;
+}
+.required-field-block .required-tag {
+  color: #c02b0a;
+  display: inline-block;
+  font-size: 13.008px;
+  box-sizing: border-box;
+}
+.sell-form-shortcode {
+  margin-top: 2rem;
+}
+.sell-form-shortcode .form-title-block {
+  border-bottom: 1px solid #ccc;
+  padding: 0 16px 8px 0;
+  margin-bottom: 30px;
+}
+.form-title-block .sell-form-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.sell-from-block p {
+  margin-bottom: 8px;
+}
+.sell-from-block .form-group p {
+  display: block;
+}
+.sell-from-block p .form-label label {
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .sell-from-block .form-group p {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.sell-from-block .form-group p label {
+  width: 100%;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+@media (min-width: 992px) {
+  .sell-from-block .form-group p label:first-child {
+    padding-right: 1rem;
+  }
+  .sell-from-block .form-group p label:last-child {
+    padding-left: 1rem;
+  }
+}
+.sell-from-block .form-group p span {
+  display: block;
+}
+.sell-from-block .form-group p .label-tag {
+  font-weight: 400;
+  font-size: .875rem;
+  padding-top: 5px;
+}
+.sell-from-block p input {
+  width: 100%;
+  min-height: 45px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #c9b9a3;
+  background: rgba(44, 26, 0, 0.1);
+  margin: 0;
+  border-radius: 3px;
+}
+.sell-from-block p input:focus {
+  outline: none;
+}
+.sell-from-block .contact-form-group p {
+  display: block;
+}
+@media (min-width: 992px) {
+  .sell-from-block .contact-form-group p {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.contact-form-group p .form-label {
+  display: block;
+}
+.contact-form-group p .form-label .info-label {
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.contact-form-group p label {
+  width: 100%;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.contact-form-group p label span {
+  display: block;
+}
+@media (min-width: 992px) {
+  .contact-form-group p label:first-child {
+    padding-right: 1rem;
+  }
+  .contact-form-group p label:last-child {
+    padding-left: 1rem;
+  }
+}
+.contact-form-group p label span select {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  font-weight: 400;
+}
+.contact-form-group p label span select:focus {
+  outline: none;
+}
+.info-inner-block {
+  margin-top: 30px;
+}
+.item-info-block {
+  margin-bottom: 30px;
+}
+.item-info-block .form-label label {
+  margin-bottom: 8px;
+}
+.item-info-block .content-area {
+  width: 100%;
+}
+.item-info-block .content-area textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.item-info-block .content-area textarea:focus {
+  outline: none;
+}
+.item-info-block .img-upload-block label {
+  width: 100%;
+  background: rgba(0,0,0,.02);
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 32px;
+  text-align: center;
+}
+.item-info-block .img-upload-block label input {
+  background: none;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+}
+.item-info-block .upload-info-msg {
+  font-size: 15px;
+  padding-top: 6px;
+  display: block;
+}
+.sell-from-block  input[type="submit"] {
+  display: block;
+  text-transform: uppercase;
+  min-width: 150px;
+  height: auto;
+  color: #fff3d7;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: #7d0000;
+  border: none;
+  transition: background-color 0.3s;
+  width: auto;
+  margin-top: 3rem;
+}
+.sell-from-block input[type="submit"]:hover {
+  background-color: #b00000;
 }
