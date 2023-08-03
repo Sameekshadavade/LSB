@@ -4,7 +4,7 @@
 
 <!-- ======= Start-Main-Area ======= -->
 <div class="main-wrapper-area">
-    <?php  
+<?php  
 
 $payment_head_title = get_field('_payment_head_title');
 $payment_content_details = get_field('_payment_content_details');
@@ -14,7 +14,8 @@ $contact_info_shortcode = get_field('_contact_info_shortcode');
 $payment_info_title = get_field('_payment_info_title');
 $payment_info_shortcode_ = get_field('_payment_info_shortcode_');
 
-?>
+if($payment_content_details !='' || $payment_head_title !='' || $contact_info_shortcode !='' || $contact_info_title !=''){
+?> 
     <div class="container page-content">
         <?php if($payment_content_details !=''){ ?>
         <section class="common-header mb-5">
@@ -33,13 +34,16 @@ $payment_info_shortcode_ = get_field('_payment_info_shortcode_');
                 <div class="col-12 mt-4">
                     <h2 class="payment-title"><?php echo $payment_form_title; ?></h2>
                 </div>
-                <?php } ?>
+            <?php } if($contact_info_shortcode !=''){ ?>
+                    <div class="payment-info-section">
+                        <h4><?php echo $contact_info_title; ?></h4>
+                        <?php echo do_shortcode($contact_info_shortcode); ?>
+                    </div>
+            <?php } ?>
             </div>
         </section>
-
     </div>
-
 </div>
 <!-- ======= End-Main-Area ======= -->
 
-<?php get_footer(); ?>
+<?php } get_footer(); ?>
