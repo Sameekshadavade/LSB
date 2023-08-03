@@ -2413,6 +2413,7 @@ section.our-team-members .team-person h3 small {
   color: #7d0000;
   font-size: 1.5rem;
   margin-bottom: 6px;
+  font-weight: 400;
 }
 .faq-inner-block .accordion-header .accordion-button:focus {
   outline: none;
@@ -2420,6 +2421,7 @@ section.our-team-members .team-person h3 small {
 }
 .faq-inner-block .accordion-header .accordion-button.collapsed {
   color: #2c1a00;
+  font-weight: 400;
 }
 .faq-inner-block .accordion-collapse.collapse .accordion-body {
   transition: all 0.3s ease-out;
@@ -2437,10 +2439,24 @@ section.our-team-members .team-person h3 small {
   transform: rotate(0deg);
   transition: all 0.3s;
 }
+@media (min-width: 992px) {
+  .faq-sidebar {
+    margin-top: 0;
+    padding-left: 3rem;
+  }
+}
 @media (max-width: 767px) {
   .faq-sidebar {
     margin-top: 2rem;
   }
+}
+.faq-sidebar h2 {
+  text-align: center;
+  font-weight: 400;
+}
+.faq-sidebar h2 small {
+  line-height: 1.2;
+  font-weight: 400;
 }
 
 /*--------------------------------------------------------------
@@ -2679,12 +2695,6 @@ input[type="submit"]:hover {
 .sell-heading-block .required-field-block {
   box-sizing: border-box;
 }
-.required-field-block .required-tag {
-  color: #c02b0a;
-  display: inline-block;
-  font-size: 13.008px;
-  box-sizing: border-box;
-}
 .sell-form-shortcode {
   margin-top: 2rem;
 }
@@ -2697,43 +2707,43 @@ input[type="submit"]:hover {
   font-size: 1.2rem;
   font-weight: 400;
 }
-.sell-from-block p {
+.common-from-block p {
   margin-bottom: 8px;
 }
-.sell-from-block .form-group p {
+.common-from-block .form-group p {
   display: block;
 }
-.sell-from-block p .form-label label {
+.common-from-block p .form-label label {
   font-weight: 600;
 }
 @media (min-width: 992px) {
-  .sell-from-block .form-group p {
+  .common-from-block .form-group p {
     display: flex;
     justify-content: space-between;
   }
 }
-.sell-from-block .form-group p label {
+.common-from-block .form-group p label {
   width: 100%;
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
 @media (min-width: 992px) {
-  .sell-from-block .form-group p label:first-child {
+  .common-from-block .form-group p label:first-child {
     padding-right: 1rem;
   }
-  .sell-from-block .form-group p label:last-child {
+  .common-from-block .form-group p label:last-child {
     padding-left: 1rem;
   }
 }
-.sell-from-block .form-group p span {
+.common-from-block .form-group p span {
   display: block;
 }
-.sell-from-block .form-group p .label-tag {
+.common-from-block .form-group p .label-tag {
   font-weight: 400;
-  font-size: .875rem;
+  font-size: 0.875rem;
   padding-top: 5px;
 }
-.sell-from-block p input {
+.common-from-block p input {
   width: 100%;
   min-height: 45px;
   padding: 0.5rem 1rem;
@@ -2742,14 +2752,14 @@ input[type="submit"]:hover {
   margin: 0;
   border-radius: 3px;
 }
-.sell-from-block p input:focus {
+.common-from-block p input:focus {
   outline: none;
 }
-.sell-from-block .contact-form-group p {
+.common-from-block .contact-form-group p {
   display: block;
 }
 @media (min-width: 992px) {
-  .sell-from-block .contact-form-group p {
+  .common-from-block .contact-form-group p {
     display: flex;
     justify-content: space-between;
   }
@@ -2769,6 +2779,9 @@ input[type="submit"]:hover {
 }
 .contact-form-group p label span {
   display: block;
+}
+.contact-form-group p label .required-tag {
+  display: inline-block;
 }
 @media (min-width: 992px) {
   .contact-form-group p label:first-child {
@@ -2807,7 +2820,7 @@ input[type="submit"]:hover {
 }
 .item-info-block .img-upload-block label {
   width: 100%;
-  background: rgba(0,0,0,.02);
+  background: rgba(0, 0, 0, 0.02);
   border: 1px dashed #ccc;
   border-radius: 4px;
   margin-bottom: 8px;
@@ -2826,7 +2839,36 @@ input[type="submit"]:hover {
   padding-top: 6px;
   display: block;
 }
-.sell-from-block  input[type="submit"] {
+.country-field-block label {
+  width: 100%;
+}
+.country-field-block span {
+  display: block;
+  width: 100%;
+}
+.country-field-block span select {
+  width: 100%;
+  display: block;
+}
+.country-field-block span select:focus {
+  outline: none;
+}
+.faq-field-block label .label-tag {
+  margin-bottom: 10px;
+  display: block;
+  font-size: .875rem;
+  padding-top: 4px;
+}
+.faq-field-block .item-info-block {
+  margin-bottom: 20px;
+}
+.required-tag {
+  color: #c02b0a;
+  display: inline-block;
+  font-size: 13.008px;
+  box-sizing: border-box;
+}
+.common-from-block input[type="submit"] {
   display: block;
   text-transform: uppercase;
   min-width: 150px;
@@ -2840,6 +2882,6 @@ input[type="submit"]:hover {
   width: auto;
   margin-top: 3rem;
 }
-.sell-from-block input[type="submit"]:hover {
+.common-from-block input[type="submit"]:hover {
   background-color: #b00000;
 }
