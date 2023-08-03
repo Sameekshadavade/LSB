@@ -14,7 +14,7 @@ if($feat_image !=''){
     <section class="banner-section careers" style="background-image: url('<?php echo $feat_image; ?>');">
         <div class="banner-content">
     <?php if($desktop_about_banner_site_logo !=''){ ?>
-            <img class="lsb-logo" src="<?php echo $desktop_about_banner_site_logo; ?>"
+            <img class="lsb-logo" src="<?php echo $desktop_about_banner_site_logo['url']; ?>"
                 alt="LSB Logo About Us">
     <?php } if(get_the_content() !=''){ the_content(); } ?>
 

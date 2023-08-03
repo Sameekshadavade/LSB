@@ -54,13 +54,6 @@
                         </div>
                     <?php } ?>
                 </div>
-                <?php if ($seller_info_form_title != '') { ?>
-                <div class="col-12 mt-4">
-                    <h2 class="payment-title"><?php echo $seller_info_form_title; ?></h2>
-                    <p class="required-field-block">"<span class="required-tag">*</span>" indicates required fields</p>
-                </div>
-                <?php } ?>
-            </div>
         </section>
         <?php }
         if ($seller_form_shortcode != '') { ?>
@@ -72,7 +65,6 @@
                     <?php echo do_shortcode($seller_form_shortcode); ?>
                 </div>
             </div>
-            <?php echo do_shortcode($seller_form_shortcode); ?>
         </div>
         <?php } ?>
     </div>
