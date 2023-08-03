@@ -8,7 +8,7 @@
    <!-- ======= Start-inner-collection-Area ======= -->
    <div class="container page-content">
 
-      <section class="common-header mt-md-3 mt-sm-5 mb-5">
+      <section class="common-header mt-lg-3 mt-5 mb-5">
          <header class="page-header">
             <h1 class="page-title"><?php echo get_the_title(); ?></h1>
          </header>

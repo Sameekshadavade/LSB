@@ -61,7 +61,7 @@
                 <div class="form-title-block" data-js-reload="field_2_11">
                     <h3 class="sell-form-title">Contact Information</h3>
                 </div>
-                <div class="sell-from-block">
+                <div class="common-from-block">
                     <?php echo do_shortcode($seller_form_shortcode); ?>
                 </div>
             </div>
