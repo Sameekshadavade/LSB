@@ -1530,10 +1530,10 @@ h2.section-heading span {
   margin-top: 0;
   padding: 0 0.75rem;
   text-align: center;
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
 }
 .article-card-block .card-body .entry-header h2 a {
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
 }
 .article-card-block .card-body .entry-header h2 a:hover {
   text-decoration: underline;
@@ -2577,6 +2577,9 @@ input[type="submit"]:hover {
 }
 .collection-block article.card.article-card-block {
   padding: 0px;
+}
+.collection-block article.card.article-card-block .card-title {
+  min-height: 60px;
 }
 .right-collection-block .widget {
   border-bottom: none !important;
