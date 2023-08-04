@@ -56,7 +56,7 @@
                   ?>
                         <div class="col-md-6">
                            <article class="card article-card-block">
-                              <a href="" class="card-body">
+                              <a href="<?php the_permalink(); ?>" class="card-body">
                                  <header class="entry-header">
                                     <?php if ($feat_image != '') { ?>
                                        <div class="post-thumbnail">
