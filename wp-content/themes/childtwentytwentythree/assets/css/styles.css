@@ -2702,7 +2702,7 @@ input[type="submit"]:hover {
   margin-top: 2rem;
 }
 .sell-form-shortcode .form-title-block {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000;
   padding: 0 16px 8px 0;
   margin-bottom: 30px;
 }
@@ -2737,6 +2737,15 @@ input[type="submit"]:hover {
   .common-from-block .form-group p label:last-child {
     padding-left: 1rem;
   }
+}
+.common-from-block .form-group .content-area {
+  width: 100%;
+}
+.common-from-block .form-group .content-area select {
+  width: 100%;
+}
+.common-from-block .form-group .content-area select:focus {
+  outline: none;
 }
 .common-from-block .form-group p span {
   display: block;
@@ -2813,6 +2822,11 @@ input[type="submit"]:hover {
 }
 .item-info-block .content-area {
   width: 100%;
+}
+.item-info-block .label-tag {
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding-top: 5px;
 }
 .item-info-block .content-area textarea {
   width: 100%;
