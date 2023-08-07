@@ -223,7 +223,7 @@ button.cta {
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
-  color: var(--color-secondary) !important;
+  color: var(--color-secondary);
   min-width: 200px;
   padding: 1.15rem;
   margin: 2rem auto;
@@ -2874,7 +2874,7 @@ input[type="submit"]:hover {
 .faq-field-block label .label-tag {
   margin-bottom: 10px;
   display: block;
-  font-size: .875rem;
+  font-size: 0.875rem;
   padding-top: 4px;
 }
 .faq-field-block .item-info-block {
@@ -2902,4 +2902,88 @@ input[type="submit"]:hover {
 }
 .common-from-block input[type="submit"]:hover {
   background-color: #b00000;
+}
+
+/*--------------------------------------------------------------
+# Single Post Content Page Css
+--------------------------------------------------------------*/
+body.single-post {
+  background: linear-gradient(to bottom, #c9b9a3 20%, #fff3d7 60%);
+  background-attachment: fixed;
+}
+.single-main-block .post_image {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.single-main-block .post_image img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  border: 10px solid #fff3d7;
+}
+.single-post-title {
+  padding: 0 2rem;
+}
+.single-post-title h2 {
+  margin: 0 auto 2rem auto;
+  max-width: 800px;
+  text-align: center;
+  font-weight: 500;
+  line-height: initial;
+  font-size: 2rem;
+}
+@media (min-width: 576px) {
+  .single-post-title h2 {
+    margin: 2rem auto;
+  }
+}
+@media (min-width: 992px) {
+  .single-post-content {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.single-post-content .button-sec {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0 0 2rem 0;
+  border-top: 1px solid #2c1a00;
+  border-bottom: 1px solid #2c1a00;
+}
+@media (min-width: 576px) {
+  .single-post-content .button-sec {
+    display: flex;
+  }
+}
+a.cta.with-icon, button.cta.with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.single-post-content .button-sec .cta {
+  text-decoration: none;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.25rem;
+}
+@media (min-width: 576px) {
+  .single-post-content .button-sec .cta {
+    flex: 0 1 auto;
+  }
+}
+.single-post-content figure.wp-caption {
+  max-width: 350px;
+  width: auto;
+  margin: 0;
+}
+.single-post-content figure.wp-caption img {
+  width: 100%;
+  height: auto;
+  padding: .5rem;
 }
