@@ -7,7 +7,7 @@
    <!-- ======= Start-inner-collection-Area ======= -->
    <div class="container page-content">
 
-      <section class="common-header mt-lg-3 mt-5 mb-5">
+      <section class="common-header mt-lg-4 mt-5 mb-5">
          <header class="page-header">
             <h1 class="page-title"><?php echo get_the_title(); ?></h1>
          </header>
@@ -24,7 +24,7 @@
                         <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search …', 'placeholder') ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x('Search for:', 'label') ?>" />
                      </li>
                      <li>
-                        <input type="submit" class="search-submit" value="<?php echo esc_attr_x('Search', 'submit button') ?>" />
+                        <input type="submit" class="search-submit" value="<?php echo esc_attr_x('Submit', 'submit button') ?>" />
                      </li>
                   </ul>
                </div>

@@ -41,7 +41,7 @@ $Post_Query = new WP_Query($args);
         <div class="container page-content careers">
             <section class="career-section">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-7">
             <?php 
                     while ($Post_Query->have_posts()) : $Post_Query->the_post();
             ?>

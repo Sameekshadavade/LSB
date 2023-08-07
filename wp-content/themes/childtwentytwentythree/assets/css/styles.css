@@ -54,6 +54,14 @@ a:active,
 a:hover {
   outline: 0;
 }
+p a, p a:active, p a:visited {
+  color: #7d0000;
+  text-decoration: underline;
+}
+p em {
+  text-decoration: underline;
+  font-style: none;
+}
 article,
 aside,
 details,
@@ -455,7 +463,8 @@ ul.utility-section i.material-icons {
 .company-phone-number small {
   display: block;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 10px;
+  line-height: 1.2;
 }
 @media (min-width: 768px) {
   .search-bar {
@@ -483,8 +492,14 @@ ul.utility-section i.material-icons {
   height: auto;
   min-height: initial;
   border-radius: 0;
-  padding: 0.375rem 0.75rem !important;
+  padding: 0.375rem 0.75rem;
   background: var(--color-secondary);
+  border: 1px solid #ced4da;
+  color: #2c1a00;
+  font-weight: 400;
+}
+.search-bar input[type="text"]:focus {
+  outline: none;
 }
 .search-bar fieldset {
   border: none;
@@ -874,6 +889,7 @@ ul.utility-section i.material-icons {
   .footer .company-info {
     border: none;
     border-left: 1px solid var(--color-secondary);
+    padding-left: 28px;
   }
 }
 
@@ -1114,7 +1130,7 @@ li.widget_block {
 }
 .sold-price h3 {
   color: var(--color-primary) !important;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 2rem !important;
   background: var(--color-white);
   max-width: 250px;
@@ -1130,10 +1146,13 @@ li.widget_block {
   font-style: oblique;
   padding: 0.5rem 0;
   background: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 @media (min-width: 992px) {
   .sold-price h3 {
     font-size: 2.5rem !important;
+    margin-top: 24px !important;
   }
 }
 .home-banner-newsletter input[type="email"] {
@@ -1143,15 +1162,16 @@ li.widget_block {
   border: 1px solid var(--color-primary);
 }
 .home-banner-newsletter input[type="submit"] {
-  background: var(--color-primary);
+  background: #7d0000;
   opacity: 1;
-  padding: 10px 30px 10px 30px;
+  padding: 1rem;
   box-shadow: none;
   border: 0px solid RGBA(0, 0, 0, 1);
   margin-top: 20px;
-  color: var(--color-white);
+  color: #fff;
   text-transform: uppercase;
   border-radius: 0px;
+  min-width: 150px;
 }
 
 /* ---------client-review-slider-section-css------------- */
@@ -1296,6 +1316,7 @@ header.page-header {
 header.page-header h1.page-title {
   margin-top: 0;
   border-bottom: 1px solid var(--color-default);
+  font-weight: 400;
 }
 header.page-header h1.page-title::after {
   margin-bottom: -27px;
@@ -1340,6 +1361,7 @@ header.page-header h1.page-title::after {
 
 .about-buy-sell h2 {
   text-align: center;
+  font-weight: 400;
 }
 
 .about-buy-sell img {
@@ -1429,6 +1451,7 @@ header.page-header h1.page-title::after {
     text-transform: uppercase;
     color: var(--color-primary);
     font-weight: 700;
+    text-decoration: underline;
   }
 }
 
@@ -1482,6 +1505,7 @@ h2.section-heading {
 h2.section-heading span {
   text-align: center;
   background: var(--color-secondary);
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   h2.section-heading span {
@@ -1793,14 +1817,6 @@ h2.section-heading span {
     background-image: url(../images/hero-start-lg.jpg);
   }
 }
-/* .banner-section.contact {
-  background-image: url(../images/hero-contact-lg.jpg);
-}
-@media (min-width: 768px) {
-  .banner-section.contact {
-    background-image: url(../images/hero-contact-lg.jpg);
-  }
-} */
 .banner-section.careers {
   background-image: url(../images/hero-about-lg.jpg);
 }
@@ -1812,9 +1828,6 @@ h2.section-heading span {
     background-image: url(../images/hero-sell-lg.jpg);
   }
 }
-/* .banner-section.spencer {
-  background-image: url(../images/hero-spencer-lg.jpg);
-} */
 .banner img {
   width: 100%;
 }
@@ -1889,6 +1902,9 @@ ul.circle-checkmark li::before {
   font-weight: 700;
   font-size: 1rem;
 }
+.history-section h2 {
+  font-weight: 400;
+}
 
 /*--------------------------------------------------------------
 # Our Staff Page Css
@@ -1935,6 +1951,7 @@ ul.circle-checkmark li::before {
   text-transform: none;
   margin-top: 0.5rem;
   line-height: 1.25;
+  font-weight: 400;
 }
 @media (min-width: 992px) {
   .our-staff-block .staff-bio header h2 {
@@ -1947,7 +1964,7 @@ ul.circle-checkmark li::before {
   display: block;
   color: var(--color-default);
   text-transform: uppercase;
-  font-size: 70%;
+  font-size: 64%;
   line-height: 1.5;
 }
 .our-staff-block .staff-bio header div.headshot {
@@ -2167,6 +2184,7 @@ ul.company-info li:first-of-type {
 }
 .job-listing h2 {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 .careers .job-listing .cta {
   margin: 0;
@@ -2189,6 +2207,7 @@ section.our-team-members {
 
 section.our-team-members h2 {
   text-align: center;
+  font-weight: 400;
 }
 
 section.our-team-members .team-person {
@@ -2551,6 +2570,9 @@ textarea {
 .search-filter-block form.archive-search-form ul li input::-moz-placeholder {
   color: var(--color-default);
 }
+.search-filter-block form.archive-search-form ul li input:focus {
+  outline: none;
+}
 .search-filter-block
   form.archive-search-form
   ul
@@ -2590,6 +2612,7 @@ input[type="submit"]:hover {
   color: var(--color-primary);
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--color-default);
+  font-weight: 400;
 }
 .collection-widget-area {
   background: 0 0;
