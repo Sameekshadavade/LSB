@@ -120,15 +120,14 @@ $current_cat = get_queried_object();
                      </section>
                      <section id="block-2" class="widget border-bottom widget_block">
                         <ul> <?php
-                        $category = get_the_category();
+                        $category = get_categories();
                         $child_arg   = $category[0]->term_id;
-                        $child_cat = get_terms( 'category', $child_arg );
-                        
-                           //$categories = get_categories(array('parent' => $cat->first_cat));
-                              
+                        $taxonomyName = "category";
+                        $termchildren = get_term_children( $child_arg, $taxonomyName );
 
-                              foreach ($child_cat as $category) {
-                                 echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+                              foreach ($termchildren as $category_name) {
+                                 $term = get_term_by( 'id', $category_name, $taxonomyName );
+                                 echo '<li><a href="'.get_term_link( $term->name, $taxonomyName ) .'">' . $term->name . '</a></li>';
                               }
                               ?></ul>
                      </section>
