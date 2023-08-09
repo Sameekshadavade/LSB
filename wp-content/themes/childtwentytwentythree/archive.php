@@ -119,17 +119,41 @@ $current_cat = get_queried_object();
                         <h2 class="wp-block-heading">Collection Categories</h2>
                      </section>
                      <section id="block-2" class="widget border-bottom widget_block">
-                        <ul> <?php
-                        $category = get_categories();
-                        $child_arg   = $category[0]->term_id;
-                        $taxonomyName = "category";
-                        $termchildren = get_term_children( $child_arg, $taxonomyName );
+                        <ul> 
+                           <?php
+                           $cat_id = get_query_var('cat');
+                           $terms = get_terms([
+                              'taxonomy' => get_queried_object()->taxonomy,
+                              'parent'   => get_queried_object_id(),
+                              'hide_empty' => false,
 
-                              foreach ($termchildren as $category_name) {
-                                 $term = get_term_by( 'id', $category_name, $taxonomyName );
-                                 echo '<li><a href="'.get_term_link( $term->name, $taxonomyName ) .'">' . $term->name . '</a></li>';
-                              }
-                              ?></ul>
+                           ]);
+
+                                 if(!empty($terms)){
+                                 foreach ($terms as $category_name) {
+                                    echo '<li><a href="'.get_term_link($category_name) .'">' . $category_name->name . '</a></li>';
+                                 } 
+                                 }else{
+                                    
+                                    $args = array(
+                                       'post_type' => 'post',
+                                       'order' => 'DESC',
+                                       'post_status' => 'publish',
+                                       'cat' => $cat_id, //Category Slug name
+                                       'posts_per_page' => 6,
+                     
+                                    );
+                                    $loop = new WP_Query($args);
+                                    if($loop->have_posts()):
+                                    while($loop->have_posts()) : $loop->the_post();
+                                    echo '<li><a href="'.get_the_permalink().'">' .get_the_title(). '</a></li>';
+                                    
+                                 endwhile; 
+                              endif;
+                                 wp_reset_query();
+                           
+                           } ?>
+                     </ul>
                      </section>
                   </aside>
                </div>

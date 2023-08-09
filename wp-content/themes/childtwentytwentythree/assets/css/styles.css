@@ -3010,3 +3010,78 @@ a.cta.with-icon, button.cta.with-icon {
   height: auto;
   padding: .5rem;
 }
+.search_main_wrapper {
+  margin-top: 150px;
+}
+#search_filters {
+  margin: 3rem 0;
+  padding: 0 1rem;
+}
+@media (min-width: 768px){
+#search_filters #toggle_search_filters {
+    display: none;
+}
+}
+#search_filters #toggle_search_filters {
+    width: 100%;
+    background: #c9b9a3;
+    border: 1px solid #000;
+    padding: 1rem;
+}
+#search_filters .search-wrapper {
+  display: none;
+  width: 100%;
+  padding: 0.5rem 1rem 0 1rem;
+  box-shadow: inset 0 0 8px rgba(44,26,0,.3);
+  border-radius: 0 0 0.25rem 0.25rem;
+  background: rgba(44,26,0,.05);
+}
+@media (min-width: 768px){
+#search_filters .search-wrapper {
+    display: block;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+}
+#search_filters form.search-filters ul {
+  padding: 0 0 0 0.5rem;
+}
+#search_filters form.search-filters ul li {
+  width: 33%;
+  padding: 0 0.25rem;
+}
+.searchandfilter li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 10px;
+}
+#search_filters form.search-filters ul li h4 {
+  text-transform: none;
+  margin: 0 0 0.25rem;
+  font-size: 14px;
+}
+#search_filters form.search-filters ul li input, #search_filters form.search-filters ul li select {
+  width: 100%;
+}
+
+input, select {
+  height: 45px;
+}
+input, select, textarea {
+  min-height: 45px;
+  padding: 0.5rem 1rem!important;
+  border: 1px solid #c9b9a3;
+  background: rgba(44,26,0,.1);
+  margin: 0;
+  border-radius: 3px;
+}
+input {
+  line-height: normal;
+}
+#search_filters form.search-filters ul li:nth-of-type(3), #search_filters form.search-filters ul li:nth-of-type(4) {
+  width: 17%;
+}
+#search_filters form.search-filters ul li:last-of-type {
+  width: 100%;
+  margin: 2rem auto 0;
+}
