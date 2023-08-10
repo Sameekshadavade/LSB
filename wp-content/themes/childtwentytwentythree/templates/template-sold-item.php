@@ -122,7 +122,9 @@
                         <ul> <?php
                               $cat = 10;
 
-                              $categories = get_categories(array('parent' => $cat));
+                              $categories = get_categories(array('parent' => $cat,
+                                                                 'hide_empty' => false,
+                                                               ));
 
                               foreach ($categories as $category) {
                                  echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';

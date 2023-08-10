@@ -55,7 +55,7 @@
                     <li><h4>Search For</h4><?php echo get_search_form(); ?></li>
                     <li><h4>Category to Search</h4>
                       <select name="postcategory" id="postcategory" class="postform">
-                        <option value="0">All Categories</option>
+                        <option value="none">All Categories</option>
                       <?php foreach($categories as $category){  ?>
                         <option class="level-0" value="<?php echo $category->term_id; ?>"><?php echo $category->name; ?></option>
                   <?php } ?>
@@ -63,7 +63,8 @@
                     </li>
                     <li><input type="hidden" name="ofcategory_operator" value="and"></li>
                     <li>
-                      <h4>Date Range</h4><input class="postform" type="date" name="ofpost_date[]" value="">
+                      <h4>Date Range</h4>
+                      <input class="postform" type="date" name="ofpost_date[]" value="">
                     </li>
                     <li><input class="postform" type="date" name="ofpost_date[]" value=""></li>
                     <li><input type="hidden" name="ofadd_search_param" value="1">
@@ -78,33 +79,43 @@
         <?php  
 
         global $wpdb;
-        //if(isset($_POST['submit'])) {
-            $cattegory_id = $_POST['postcategory'];
-            var_dump($cat_id);
-            //$ofpost_date = $_POST['ofpost_date'];
-            //$cat_id = $_POST['ofcategory'];
-    
-            $args = array(
-                'posts_per_page' => -1,
+            $category_id = $_GET['postcategory'];
+            $postdate = $_GET['ofpost_date'];
+
+        if(!empty($category_id !='') || !empty($postdate !='')) {
+              $args = array(
                 'post_type' => 'post',
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'category',
-                        'field' => 'cat_id',
-                        'terms' => $cattegory_id  )  ) );
+                'posts_per_page' => -1,
+                'cat'=> $category_id,
+                'date_query' => array(
+                  'date' => $postdate,
+              )
+            );
       
      $query = new WP_Query($args);
       if ( $query-> have_posts() ) :
   while ( $query->have_posts() ): $query->the_post(); ?>
-          <h3><?php the_title(); ?></h3>
+          <h4><?php the_title(); ?></h4>
+          <p><?php the_date('Y-m-d'); ?></p>
           
 
 <?php
       endwhile;
     endif;
     wp_reset_postdata();
-       // }  
-        ?>
+  } else { ?>
+
+        <section class="no-results not-found card mt-3r">
+          <div class="card-body">
+            <header class="page-header">
+              <h3>Hmmm, can't seem to find that</h3>
+            </header><!-- .page-header -->
+            <div class="page-content">
+                <p>Please refine your search term, try again with some different keywords or select another category.</p>
+              </div>
+          </div>
+        </section>
+<?php } ?>
     </div>
   </div>
 </section>
