@@ -269,3 +269,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+jQuery(document).ready(function(){
+  jQuery('#clear_search_filters').on('click', function() {
+    alert("1233");
+    jQuery('#search_filters')[0].reset();
+    window.location.href = window.location.href;
+  });
+});
