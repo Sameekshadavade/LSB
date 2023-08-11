@@ -3032,7 +3032,6 @@ button.cta.with-icon {
   padding: 1rem;
 }
 #search_filters .search-wrapper {
-  display: none;
   width: 100%;
   padding: 0.5rem 1rem 0 1rem;
   box-shadow: inset 0 0 8px rgba(44, 26, 0, 0.3);
@@ -3154,4 +3153,203 @@ input {
   #error_page.page-content {
     padding-top: 6rem;
   }
+}
+
+/*--------------------------------------------------------------
+# Search Filter Page Css
+--------------------------------------------------------------*/
+
+.no-results.not-found {
+  background: 0 0;
+  border: none
+}
+
+.no-results.not-found .page-content {
+  padding: 1rem 0
+}
+
+.no-results.not-found .page-content p {
+  font-size: 1.1rem;
+  text-align: center
+}
+
+.search-inner-block .search-wrapper {
+  width: 100%;
+  padding: .5rem 1rem .5rem 1rem;
+  box-shadow: inset 0 0 8px rgba(44,26,0,.3);
+  border-radius: 0 0 .25rem .25rem;
+  background: rgba(44,26,0,.05);
+  margin: 2rem 0px;
+}
+@media (min-width: 768px) {
+  .search-inner-block .search-wrapper {
+      display:block;
+      padding: 1rem;
+      border-radius: .25rem
+  }
+}
+
+.search-inner-block .search-wrapper h5 {
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .search-inner-block .search-wrapper h5 {
+      display:block;
+      padding-left: .5rem
+  }
+}
+
+.search-inner-block .search-wrapper .btn-clear-search {
+  display: block;
+  margin: 1rem auto;
+  background: 0 0;
+  border: 1px solid #2c1a00;
+  border-radius: .25rem
+}
+
+.search-inner-block .search-wrapper.archive-search {
+  display: block
+}
+
+.search-inner-block .search-wrapper.archive-search h5 {
+  display: block
+}
+
+.search-inner-block form.archive-search-form ul {
+  width: 100%;
+  padding: 0
+}
+
+@media (min-width: 768px) {
+  .search-inner-block form.archive-search-form ul {
+      display:flex
+  }
+}
+
+.search-inner-block form.archive-search-form ul li {
+  width: 100%;
+  padding: 0
+}
+
+@media (min-width: 768px) {
+  .search-inner-block form.archive-search-form ul li {
+      flex:3
+  }
+}
+
+.search-inner-block form.archive-search-form ul li:last-of-type {
+  flex: 1;
+  margin-top: 1rem
+}
+
+@media (min-width: 768px) {
+  .search-inner-block form.archive-search-form ul li:last-of-type {
+      margin-top:0;
+      padding-left: .5rem
+  }
+}
+
+.search-inner-block form.archive-search-form ul li input {
+  height: 50px;
+  width: 100%
+}
+
+.search-inner-block form.archive-search-form ul li input::-moz-placeholder {
+  color: #2c1a00
+}
+
+.search-inner-block form.archive-search-form ul li input:-ms-input-placeholder {
+  color: #2c1a00
+}
+
+.search-inner-block form.archive-search-form ul li input::placeholder {
+  color: #2c1a00
+}
+
+.search-inner-block form.search-filters ul {
+  padding: 0
+}
+
+@media (min-width: 768px) {
+  .search-inner-block form.search-filters ul {
+      padding:0 0 0 .5rem
+  }
+}
+
+.search-inner-block form.search-filters ul li {
+  width: 100%;
+  padding: 0;
+  margin: 1rem 0
+}
+
+.search-inner-block form.search-filters ul li:nth-of-type(3),.search-inner-block form.search-filters ul li:nth-of-type(4) {
+  width: 100%
+}
+
+.search-inner-block form.search-filters ul li:nth-of-type(3) input,.search-inner-block form.search-filters ul li:nth-of-type(4) input {
+  display: block;
+  margin: 0;
+  width: 100%;
+  min-width: 95%;
+  position: relative;
+  box-sizing: border-box
+}
+
+.search-inner-block form.search-filters ul li:nth-of-type(3) input::after,.search-inner-block form.search-filters ul li:nth-of-type(4) input::after {
+  content: "From";
+  position: absolute;
+  left: 0;
+  color: #7d0000;
+  font-style: oblique;
+  font-weight: 700;
+  font-size: .875rem;
+  display: block;
+  bottom: -1.4rem
+}
+
+.search-inner-block form.search-filters ul li:nth-of-type(4) input::after {
+  content: "To"
+}
+
+@media (min-width: 768px) {
+  .search-inner-block form.search-filters ul li {
+      width:32%;
+      padding: 0 .25rem
+  }
+
+  .search-inner-block form.search-filters ul li:nth-of-type(3),.search-inner-block form.search-filters ul li:nth-of-type(4) {
+      width: 17%
+  }
+}
+
+.search-inner-block form.search-filters ul li:last-of-type {
+  width: 100%;
+  margin: 2rem auto 0
+}
+
+.search-inner-block form.search-filters ul li input,.search-inner-block form.search-filters ul li select {
+  width: 100%
+}
+
+.search-inner-block form.search-filters ul li input::-moz-placeholder,.search-inner-block form.search-filters ul li select::-moz-placeholder {
+  color: #2c1a00
+}
+
+.search-inner-block form.search-filters ul li input:-ms-input-placeholder,.search-inner-block form.search-filters ul li select:-ms-input-placeholder {
+  color: #2c1a00
+}
+
+.search-inner-block form.search-filters ul li input::placeholder,.search-inner-block form.search-filters ul li select::placeholder {
+  color: #2c1a00
+}
+
+.search-inner-block form.search-filters ul li h4 {
+  text-transform: none;
+  margin: 0 0 .25rem;
+  font-size: 16px;
+  font-weight: 400;
+}
+.search-wrapper .searchandfilter.search-filters {
+  margin-bottom: 32px;
 }
