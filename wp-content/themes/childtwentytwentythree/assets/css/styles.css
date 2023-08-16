@@ -2028,7 +2028,7 @@ ul.circle-checkmark li::before {
 }
 
 /*--------------------------------------------------------------
-# Contact Page Css - Yog
+# Contact Page Css
 --------------------------------------------------------------*/
 
 ul.company-info {
@@ -2080,7 +2080,7 @@ ul.company-info li:first-of-type {
 }
 
 /*--------------------------------------------------------------
-# Get Started Page Css - Yog
+# Get Started Page Css
 --------------------------------------------------------------*/
 
 .get-started-content {
@@ -2173,7 +2173,7 @@ ul.company-info li:first-of-type {
 }
 
 /*--------------------------------------------------------------
-# Careers Page Css - Yog
+# Careers Page Css
 --------------------------------------------------------------*/
 
 .banner-section .lsb-logo {
@@ -2191,9 +2191,26 @@ ul.company-info li:first-of-type {
 .careers .job-listing .cta {
   margin: 0;
 }
+.careers-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.careers-nav a {
+  flex: 1;
+  min-width: auto;
+  margin: 1rem;
+}
+.job-post-content ul {
+  margin: 24px 0px;
+}
+.job-post-content ul li {
+  margin-bottom: .875rem;
+}
 
 /*--------------------------------------------------------------
-# Acquisition Page Css - Yog
+# Acquisition Page Css
 --------------------------------------------------------------*/
 
 .summary-opening {
@@ -2310,7 +2327,7 @@ section.our-team-members .team-person h3 small {
 }
 
 /*--------------------------------------------------------------
-# Auction Page Css - Yog
+# Auction Page Css
 --------------------------------------------------------------*/
 .auction-listing {
   padding-top: 2rem;
@@ -2881,6 +2898,14 @@ input[type="submit"]:hover {
   font-size: 15px;
   padding-top: 6px;
   display: block;
+}
+.item-info-block .resume-upload-block label {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-align: left;
 }
 .country-field-block label {
   width: 100%;
