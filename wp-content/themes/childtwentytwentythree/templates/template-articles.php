@@ -111,7 +111,7 @@
                <div class="right-collection-block sticky-top sticky-offset">
                   <aside class="collection-widget-area">
                      <section id="block-6" class="widget border-bottom widget_block">
-                        <h2 class="wp-block-heading">RECENT ARTICLES</h2>
+                        <h2 class="wp-block-heading">Recent Articles</h2>
                      </section>
                      <section id="block-2" class="widget border-bottom widget_block">
                         <?php
@@ -135,7 +135,7 @@
                                  $post_create_date = get_the_date();
                            ?>
 
-                                 <li><?php the_title(); ?></li>
+                                 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                            <?php endwhile;
 
                            endif;

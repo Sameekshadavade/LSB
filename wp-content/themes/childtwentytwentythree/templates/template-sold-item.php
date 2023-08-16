@@ -116,7 +116,7 @@
                <div class="right-collection-block sticky-top sticky-offset">
                   <aside class="collection-widget-area">
                      <section id="block-6" class="widget border-bottom widget_block">
-                        <h2 class="wp-block-heading">Collection Categories</h2>
+                        <h2 class="wp-block-heading">Sold Items</h2>
                      </section>
                      <section id="block-2" class="widget border-bottom widget_block">
                         <ul> <?php

@@ -165,7 +165,7 @@ $Post_Query = new WP_Query($args);
                             ?>
 
                     <article class="card article-card-block col-md-6 col-lg-4">
-                        <a href="#" class="card-body">
+                        <a href="<?php the_permalink(); ?>" class="card-body">
                             <header class="entry-header">
                                 <?php if($feat_image !=''){ ?>
                                 <div class="post-thumbnail">
@@ -198,7 +198,7 @@ $Post_Query = new WP_Query($args);
                  ?>
                 </div>
                 <span class="cta-section-footer">
-                    <a class="cta" href="<?php echo home_url(); ?>">
+                    <a class="cta" href="<?php echo home_url(); ?>/all-sold-items/">
                         <span>View All Sold Items</span>
                     </a>
                 </span>
