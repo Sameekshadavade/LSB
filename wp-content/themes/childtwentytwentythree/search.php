@@ -15,6 +15,7 @@
                 <?php 
                         global $wp_query;
                         $search_query = sprintf(get_search_query());
+                        
                         $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
                         $categories = get_categories(array(
                             'orderby' => 'name',
@@ -56,7 +57,7 @@
                         <ul>
                             <li>
                               
-                                <h4>Search For</h4><?php get_search_form(); ?>
+                                <h4>Search For</h4> <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search …', 'placeholder') ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x('Search for:', 'label') ?>" />
                             </li>
                             <li>
                                 <h4>Category to Search</h4>
@@ -74,7 +75,10 @@
                                 <input class="postform" type="date" name="startdate" value="">
                             </li>
                             <li><input class="postform" type="date" name="enddate" value=""></li>
-                            <li><input type="submit" name="submit" value="submit"></li>
+                            <li>
+                            <input type="submit" class="search-submit" value="<?php echo esc_attr_x('Submit', 'submit button') ?>" />
+                        
+                        </li>
                         </ul>
                     </div>
                 </form>
@@ -86,20 +90,17 @@
             <?php
     
             global $wpdb;
-            if((!empty(isset($_GET['postcategory']))) || (!empty(isset($_GET['startdate']))) || (!empty(isset($_GET['enddate']))) || (empty($search_query))) {
+            if((!empty(isset($_GET['postcategory']))) || (!empty(isset($_GET['startdate']))) || (!empty(isset($_GET['enddate']))) ||(!empty($search_query))) {
                 $category_id = $_GET['postcategory'];
                 $startdate = $_GET['startdate'];
                 $enddate = $_GET['enddate'];
                 // prints the current time in date format 
                 $start_date = date("Y-m-d", strtotime($startdate));
-                $end_date  = date("Y-m-d", strtotime($enddate));
-
-                if (!empty($category_id) && !empty($startdate) && !empty($enddate)) {
-                    if (!empty($category_id) && !empty($startdate) && !empty($enddate)) {
+                $end_date  = date("Y-m-d", strtotime($enddate));     
                     
                     $args = array(
                         'post_type' => 'post',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => 6,
                         'order' => 'DESC',
                         'post_status' => 'publish',
                         'cat' => $category_id,
@@ -137,19 +138,7 @@
 
         <?php
             endwhile;
-          else: ?>
-            <section class="no-results not-found card mt-3r">
-        <div class="card-body">
-            <header class="page-header">
-                <h3>Hmmm, can't seem to find that</h3>
-            </header><!-- .page-header -->
-            <div class="page-content">
-                <p>Please refine your search term, try again with some different keywords or select
-                    another category.</p>
-            </div>
-        </div>
-    </section>
-        <?php
+          
         endif;
         wp_reset_postdata(); ?>
         <div class="pager">
@@ -168,8 +157,8 @@
                     )); ?>
                 </div>
             </div>
-        <?php } 
-         }
+        <?php  
+            }
          
          elseif (!empty($startdate) || !empty($enddate)) { 
          
@@ -242,9 +231,6 @@
           </div>
           <?php }
           
-
-
-         
          elseif (!empty($startdate) && !empty($enddate)) { 
                 
             
@@ -318,14 +304,12 @@
                 
  } 
  
- 
- 
  elseif (isset($category_id)) { 
 
                             
                         $args = array(
                             'post_type' => 'post',
-                            'posts_per_page' => -1,
+                            'posts_per_page' => 6,
                             'order' => 'DESC',
                             'post_status' => 'publish',
                             'cat' => $category_id,
@@ -386,8 +370,6 @@
                     </div>
                 </div>
                 <?php }
-
-         } 
           ?>
         <?php 
         if((empty($_GET['postcategory'])) && (empty($_GET['startdate'])) && (empty($_GET['enddate'])) && (empty($search_query))) {
@@ -450,5 +432,59 @@
         </section>
     </div>
 </div>
-    <!-- ======= End-Main-Area ======= -->
-    <?php get_footer(); ?>
+<?php
+if((!empty($search_query))){
+if ( have_posts() ) :
+	?>
+	<div class="col-md-4">
+            <article class="card article-card-block">
+                <a href="<?php the_permalink(); ?>" class="card-body">
+                    <header class="entry-header">
+                        <div class="post-thumbnail">
+                            <img src="<?php echo $feat_image; ?>" alt="">
+                        </div>
+                        <h2 class="entry-title card-title h3"><?php the_title(); ?></h2>
+                    </header>
+                    <footer class="entry-footer">
+                        <div class="entry-meta">
+                            <span class="posted-on">Posted on <span><time
+                                        class="entry-date published updated"><?php the_date(); ?></time></span></span>
+                        </div>
+                    </footer>
+                </a>
+        </div>
+            
+        <?php
+        else: ?>
+            <section class="no-results not-found card mt-3r">
+        <div class="card-body">
+            <header class="page-header">
+                <h3>Hmmm, can't seem to find that</h3>
+            </header><!-- .page-header -->
+            <div class="page-content">
+                <p>Please refine your search term, try again with some different keywords or select
+                    another category.</p>
+            </div>
+        </div>
+    </section>
+        <?php
+        endif;
+        wp_reset_postdata(); ?>
+        <div class="pager">
+            <?php $big = 999999999; // need an unlikely integer ?>
+
+            <div class="custom-pagination">
+                <?php
+                    echo paginate_links(array(
+                    'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                    'format' => '?paged=%#%',
+                    'current' => max(1, get_query_var('paged')),
+                    'next_text'          => __('<i class="fa-solid fa-angles-right"></i>'),
+                    'prev_text'          => __('<i class="fa-solid fa-angles-left"></i>'),
+                    'total' =>  $query->max_num_pages
+                    )); ?>
+                </div>
+            </div>
+	
+	</div><!-- .search-result-count -->
+<?php } get_footer(); ?>
